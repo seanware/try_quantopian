@@ -1,1 +1,1 @@
-web: gnuicorn seantopian:app --log-file =-
+web: gunicorn seantopian:app --log-file=-
