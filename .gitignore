@@ -7,3 +7,7 @@
 
 # Ignore the venv directory
 venv/
+data/
+
+# Ignore generated files
+*generated__*
