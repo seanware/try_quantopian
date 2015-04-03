@@ -1,0 +1,22 @@
+{% extends "base.html" %} 
+{%block title %}Index page{% endblock %} 
+{% block content %} 
+{# Review form #} 
+<h1>First analyses</h1>
+
+For now some analysis here
+later images that link to the other analysis pages.
+<table>
+<td>
+	<tr>
+		<th>date</th><th>spread</th>
+	</tr>
+{% for row in stock %}
+	<tr>
+
+	<td>{{ row.date }}</td><td>{{ '0.4f' % row.aapl|float }} </td>
+	</tr>
+{% endfor %}
+</table>
+{# Summary review of app #} 
+{% endblock %}

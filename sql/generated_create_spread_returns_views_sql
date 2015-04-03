@@ -1,0 +1,1537 @@
+
+		/* generated_create_spread_returns_views_sql
+		 *
+		 * Automatically generated create statements from
+
+		 * group_data_by_columns.py for the s&p500 stock
+
+		 * dataset on https://quantquote.com/historical-stock-data
+
+		 */ 
+		 
+		CREATE OR REPLACE VIEW spread AS (
+			SELECT
+		        	h.dt
+			, (h.a - l.a) / l.a AS a
+, (h.aa - l.aa) / l.aa AS aa
+, (h.aapl - l.aapl) / l.aapl AS aapl
+, (h.abbv - l.abbv) / l.abbv AS abbv
+, (h.abc - l.abc) / l.abc AS abc
+, (h.abt - l.abt) / l.abt AS abt
+, (h.ace - l.ace) / l.ace AS ace
+, (h.acn - l.acn) / l.acn AS acn
+, (h.act - l.act) / l.act AS act
+, (h.adbe - l.adbe) / l.adbe AS adbe
+, (h.adi - l.adi) / l.adi AS adi
+, (h.adm - l.adm) / l.adm AS adm
+, (h.adp - l.adp) / l.adp AS adp
+, (h.adsk - l.adsk) / l.adsk AS adsk
+, (h.adt - l.adt) / l.adt AS adt
+, (h.aee - l.aee) / l.aee AS aee
+, (h.aep - l.aep) / l.aep AS aep
+, (h.aes - l.aes) / l.aes AS aes
+, (h.aet - l.aet) / l.aet AS aet
+, (h.afl - l.afl) / l.afl AS afl
+, (h.agn - l.agn) / l.agn AS agn
+, (h.aig - l.aig) / l.aig AS aig
+, (h.aiv - l.aiv) / l.aiv AS aiv
+, (h.aiz - l.aiz) / l.aiz AS aiz
+, (h.akam - l.akam) / l.akam AS akam
+, (h.all - l.all) / l.all AS all
+, (h.altr - l.altr) / l.altr AS altr
+, (h.alxn - l.alxn) / l.alxn AS alxn
+, (h.amat - l.amat) / l.amat AS amat
+, (h.amd - l.amd) / l.amd AS amd
+, (h.amgn - l.amgn) / l.amgn AS amgn
+, (h.amp - l.amp) / l.amp AS amp
+, (h.amt - l.amt) / l.amt AS amt
+, (h.amzn - l.amzn) / l.amzn AS amzn
+, (h.an - l.an) / l.an AS an
+, (h.anf - l.anf) / l.anf AS anf
+, (h.aon - l.aon) / l.aon AS aon
+, (h.apa - l.apa) / l.apa AS apa
+, (h.apc - l.apc) / l.apc AS apc
+, (h.apd - l.apd) / l.apd AS apd
+, (h.aph - l.aph) / l.aph AS aph
+, (h.apol - l.apol) / l.apol AS apol
+, (h.arg - l.arg) / l.arg AS arg
+, (h.ati - l.ati) / l.ati AS ati
+, (h.avb - l.avb) / l.avb AS avb
+, (h.avp - l.avp) / l.avp AS avp
+, (h.avy - l.avy) / l.avy AS avy
+, (h.axp - l.axp) / l.axp AS axp
+, (h.azo - l.azo) / l.azo AS azo
+, (h.ba - l.ba) / l.ba AS ba
+, (h.bac - l.bac) / l.bac AS bac
+, (h.bax - l.bax) / l.bax AS bax
+, (h.bbby - l.bbby) / l.bbby AS bbby
+, (h.bbt - l.bbt) / l.bbt AS bbt
+, (h.bby - l.bby) / l.bby AS bby
+, (h.bcr - l.bcr) / l.bcr AS bcr
+, (h.bdx - l.bdx) / l.bdx AS bdx
+, (h.beam - l.beam) / l.beam AS beam
+, (h.ben - l.ben) / l.ben AS ben
+, (h.bf - l.bf) / l.bf AS bf
+, (h.bhi - l.bhi) / l.bhi AS bhi
+, (h.biib - l.biib) / l.biib AS biib
+, (h.bk - l.bk) / l.bk AS bk
+, (h.blk - l.blk) / l.blk AS blk
+, (h.bll - l.bll) / l.bll AS bll
+, (h.bmc - l.bmc) / l.bmc AS bmc
+, (h.bms - l.bms) / l.bms AS bms
+, (h.bmy - l.bmy) / l.bmy AS bmy
+, (h.brcm - l.brcm) / l.brcm AS brcm
+, (h.brkb - l.brkb) / l.brkb AS brkb
+, (h.bsx - l.bsx) / l.bsx AS bsx
+, (h.btu - l.btu) / l.btu AS btu
+, (h.bwa - l.bwa) / l.bwa AS bwa
+, (h.bxp - l.bxp) / l.bxp AS bxp
+, (h.c - l.c) / l.c AS c
+, (h.ca - l.ca) / l.ca AS ca
+, (h.cag - l.cag) / l.cag AS cag
+, (h.cah - l.cah) / l.cah AS cah
+, (h.cam - l.cam) / l.cam AS cam
+, (h.cat - l.cat) / l.cat AS cat
+, (h.cb - l.cb) / l.cb AS cb
+, (h.cbg - l.cbg) / l.cbg AS cbg
+, (h.cbs - l.cbs) / l.cbs AS cbs
+, (h.cce - l.cce) / l.cce AS cce
+, (h.cci - l.cci) / l.cci AS cci
+, (h.ccl - l.ccl) / l.ccl AS ccl
+, (h.celg - l.celg) / l.celg AS celg
+, (h.cern - l.cern) / l.cern AS cern
+, (h.cf - l.cf) / l.cf AS cf
+, (h.cfn - l.cfn) / l.cfn AS cfn
+, (h.chk - l.chk) / l.chk AS chk
+, (h.chrw - l.chrw) / l.chrw AS chrw
+, (h.ci - l.ci) / l.ci AS ci
+, (h.cinf - l.cinf) / l.cinf AS cinf
+, (h.cl - l.cl) / l.cl AS cl
+, (h.clf - l.clf) / l.clf AS clf
+, (h.clx - l.clx) / l.clx AS clx
+, (h.cma - l.cma) / l.cma AS cma
+, (h.cmcsa - l.cmcsa) / l.cmcsa AS cmcsa
+, (h.cme - l.cme) / l.cme AS cme
+, (h.cmg - l.cmg) / l.cmg AS cmg
+, (h.cmi - l.cmi) / l.cmi AS cmi
+, (h.cms - l.cms) / l.cms AS cms
+, (h.cnp - l.cnp) / l.cnp AS cnp
+, (h.cnx - l.cnx) / l.cnx AS cnx
+, (h.cof - l.cof) / l.cof AS cof
+, (h.cog - l.cog) / l.cog AS cog
+, (h.coh - l.coh) / l.coh AS coh
+, (h.col - l.col) / l.col AS col
+, (h.cop - l.cop) / l.cop AS cop
+, (h.cost - l.cost) / l.cost AS cost
+, (h.cov - l.cov) / l.cov AS cov
+, (h.cpb - l.cpb) / l.cpb AS cpb
+, (h.crm - l.crm) / l.crm AS crm
+, (h.csc - l.csc) / l.csc AS csc
+, (h.csco - l.csco) / l.csco AS csco
+, (h.csx - l.csx) / l.csx AS csx
+, (h.ctas - l.ctas) / l.ctas AS ctas
+, (h.ctl - l.ctl) / l.ctl AS ctl
+, (h.ctsh - l.ctsh) / l.ctsh AS ctsh
+, (h.ctxs - l.ctxs) / l.ctxs AS ctxs
+, (h.cvc - l.cvc) / l.cvc AS cvc
+, (h.cvh - l.cvh) / l.cvh AS cvh
+, (h.cvs - l.cvs) / l.cvs AS cvs
+, (h.cvx - l.cvx) / l.cvx AS cvx
+, (h.d - l.d) / l.d AS d
+, (h.dd - l.dd) / l.dd AS dd
+, (h.de - l.de) / l.de AS de
+, (h.dell - l.dell) / l.dell AS dell
+, (h.df - l.df) / l.df AS df
+, (h.dfs - l.dfs) / l.dfs AS dfs
+, (h.dg - l.dg) / l.dg AS dg
+, (h.dgx - l.dgx) / l.dgx AS dgx
+, (h.dhi - l.dhi) / l.dhi AS dhi
+, (h.dhr - l.dhr) / l.dhr AS dhr
+, (h.dis - l.dis) / l.dis AS dis
+, (h.disca - l.disca) / l.disca AS disca
+, (h.dlph - l.dlph) / l.dlph AS dlph
+, (h.dltr - l.dltr) / l.dltr AS dltr
+, (h.dnb - l.dnb) / l.dnb AS dnb
+, (h.dnr - l.dnr) / l.dnr AS dnr
+, (h.do - l.do) / l.do AS do
+, (h.dov - l.dov) / l.dov AS dov
+, (h.dow - l.dow) / l.dow AS dow
+, (h.dps - l.dps) / l.dps AS dps
+, (h.dri - l.dri) / l.dri AS dri
+, (h.dte - l.dte) / l.dte AS dte
+, (h.dtv - l.dtv) / l.dtv AS dtv
+, (h.duk - l.duk) / l.duk AS duk
+, (h.dva - l.dva) / l.dva AS dva
+, (h.dvn - l.dvn) / l.dvn AS dvn
+, (h.ea - l.ea) / l.ea AS ea
+, (h.ebay - l.ebay) / l.ebay AS ebay
+, (h.ecl - l.ecl) / l.ecl AS ecl
+, (h.ed - l.ed) / l.ed AS ed
+, (h.efx - l.efx) / l.efx AS efx
+, (h.eix - l.eix) / l.eix AS eix
+, (h.el - l.el) / l.el AS el
+, (h.emc - l.emc) / l.emc AS emc
+, (h.emn - l.emn) / l.emn AS emn
+, (h.emr - l.emr) / l.emr AS emr
+, (h.eog - l.eog) / l.eog AS eog
+, (h.eqr - l.eqr) / l.eqr AS eqr
+, (h.eqt - l.eqt) / l.eqt AS eqt
+, (h.esrx - l.esrx) / l.esrx AS esrx
+, (h.esv - l.esv) / l.esv AS esv
+, (h.etfc - l.etfc) / l.etfc AS etfc
+, (h.etn - l.etn) / l.etn AS etn
+, (h.etr - l.etr) / l.etr AS etr
+, (h.ew - l.ew) / l.ew AS ew
+, (h.exc - l.exc) / l.exc AS exc
+, (h.expd - l.expd) / l.expd AS expd
+, (h.expe - l.expe) / l.expe AS expe
+, (h.f - l.f) / l.f AS f
+, (h.fast - l.fast) / l.fast AS fast
+, (h.fcx - l.fcx) / l.fcx AS fcx
+, (h.fdo - l.fdo) / l.fdo AS fdo
+, (h.fdx - l.fdx) / l.fdx AS fdx
+, (h.fe - l.fe) / l.fe AS fe
+, (h.ffiv - l.ffiv) / l.ffiv AS ffiv
+, (h.fhn - l.fhn) / l.fhn AS fhn
+, (h.fis - l.fis) / l.fis AS fis
+, (h.fisv - l.fisv) / l.fisv AS fisv
+, (h.fitb - l.fitb) / l.fitb AS fitb
+, (h.flir - l.flir) / l.flir AS flir
+, (h.flr - l.flr) / l.flr AS flr
+, (h.fls - l.fls) / l.fls AS fls
+, (h.fmc - l.fmc) / l.fmc AS fmc
+, (h.fosl - l.fosl) / l.fosl AS fosl
+, (h.frx - l.frx) / l.frx AS frx
+, (h.fslr - l.fslr) / l.fslr AS fslr
+, (h.fti - l.fti) / l.fti AS fti
+, (h.ftr - l.ftr) / l.ftr AS ftr
+, (h.gas - l.gas) / l.gas AS gas
+, (h.gci - l.gci) / l.gci AS gci
+, (h.gd - l.gd) / l.gd AS gd
+, (h.ge - l.ge) / l.ge AS ge
+, (h.gild - l.gild) / l.gild AS gild
+, (h.gis - l.gis) / l.gis AS gis
+, (h.glw - l.glw) / l.glw AS glw
+, (h.gme - l.gme) / l.gme AS gme
+, (h.gnw - l.gnw) / l.gnw AS gnw
+, (h.goog - l.goog) / l.goog AS goog
+, (h.gpc - l.gpc) / l.gpc AS gpc
+, (h.gps - l.gps) / l.gps AS gps
+, (h.grmn - l.grmn) / l.grmn AS grmn
+, (h.gs - l.gs) / l.gs AS gs
+, (h.gt - l.gt) / l.gt AS gt
+, (h.gww - l.gww) / l.gww AS gww
+, (h.hal - l.hal) / l.hal AS hal
+, (h.har - l.har) / l.har AS har
+, (h.has - l.has) / l.has AS has
+, (h.hban - l.hban) / l.hban AS hban
+, (h.hcbk - l.hcbk) / l.hcbk AS hcbk
+, (h.hcn - l.hcn) / l.hcn AS hcn
+, (h.hcp - l.hcp) / l.hcp AS hcp
+, (h.hd - l.hd) / l.hd AS hd
+, (h.hes - l.hes) / l.hes AS hes
+, (h.hig - l.hig) / l.hig AS hig
+, (h.hnz - l.hnz) / l.hnz AS hnz
+, (h.hog - l.hog) / l.hog AS hog
+, (h.hon - l.hon) / l.hon AS hon
+, (h.hot - l.hot) / l.hot AS hot
+, (h.hp - l.hp) / l.hp AS hp
+, (h.hpq - l.hpq) / l.hpq AS hpq
+, (h.hrb - l.hrb) / l.hrb AS hrb
+, (h.hrl - l.hrl) / l.hrl AS hrl
+, (h.hrs - l.hrs) / l.hrs AS hrs
+, (h.hsp - l.hsp) / l.hsp AS hsp
+, (h.hst - l.hst) / l.hst AS hst
+, (h.hsy - l.hsy) / l.hsy AS hsy
+, (h.hum - l.hum) / l.hum AS hum
+, (h.ibm - l.ibm) / l.ibm AS ibm
+, (h.ice - l.ice) / l.ice AS ice
+, (h.iff - l.iff) / l.iff AS iff
+, (h.igt - l.igt) / l.igt AS igt
+, (h.intc - l.intc) / l.intc AS intc
+, (h.intu - l.intu) / l.intu AS intu
+, (h.ip - l.ip) / l.ip AS ip
+, (h.ipg - l.ipg) / l.ipg AS ipg
+, (h.ir - l.ir) / l.ir AS ir
+, (h.irm - l.irm) / l.irm AS irm
+, (h.isrg - l.isrg) / l.isrg AS isrg
+, (h.itw - l.itw) / l.itw AS itw
+, (h.ivz - l.ivz) / l.ivz AS ivz
+, (h.jbl - l.jbl) / l.jbl AS jbl
+, (h.jci - l.jci) / l.jci AS jci
+, (h.jcp - l.jcp) / l.jcp AS jcp
+, (h.jdsu - l.jdsu) / l.jdsu AS jdsu
+, (h.jec - l.jec) / l.jec AS jec
+, (h.jnj - l.jnj) / l.jnj AS jnj
+, (h.jnpr - l.jnpr) / l.jnpr AS jnpr
+, (h.joy - l.joy) / l.joy AS joy
+, (h.jpm - l.jpm) / l.jpm AS jpm
+, (h.jwn - l.jwn) / l.jwn AS jwn
+, (h.k - l.k) / l.k AS k
+, (h.key - l.key) / l.key AS key
+, (h.kim - l.kim) / l.kim AS kim
+, (h.klac - l.klac) / l.klac AS klac
+, (h.kmb - l.kmb) / l.kmb AS kmb
+, (h.kmi - l.kmi) / l.kmi AS kmi
+, (h.kmx - l.kmx) / l.kmx AS kmx
+, (h.ko - l.ko) / l.ko AS ko
+, (h.kr - l.kr) / l.kr AS kr
+, (h.krft - l.krft) / l.krft AS krft
+, (h.kss - l.kss) / l.kss AS kss
+, (h.l - l.l) / l.l AS l
+, (h.leg - l.leg) / l.leg AS leg
+, (h.len - l.len) / l.len AS len
+, (h.lh - l.lh) / l.lh AS lh
+, (h.life - l.life) / l.life AS life
+, (h.lll - l.lll) / l.lll AS lll
+, (h.lltc - l.lltc) / l.lltc AS lltc
+, (h.lly - l.lly) / l.lly AS lly
+, (h.lm - l.lm) / l.lm AS lm
+, (h.lmt - l.lmt) / l.lmt AS lmt
+, (h.lnc - l.lnc) / l.lnc AS lnc
+, (h.lo - l.lo) / l.lo AS lo
+, (h.low - l.low) / l.low AS low
+, (h.lrcx - l.lrcx) / l.lrcx AS lrcx
+, (h.lsi - l.lsi) / l.lsi AS lsi
+, (h.ltd - l.ltd) / l.ltd AS ltd
+, (h.luk - l.luk) / l.luk AS luk
+, (h.luv - l.luv) / l.luv AS luv
+, (h.lyb - l.lyb) / l.lyb AS lyb
+, (h.m - l.m) / l.m AS m
+, (h.ma - l.ma) / l.ma AS ma
+, (h.mar - l.mar) / l.mar AS mar
+, (h.mas - l.mas) / l.mas AS mas
+, (h.mat - l.mat) / l.mat AS mat
+, (h.mcd - l.mcd) / l.mcd AS mcd
+, (h.mchp - l.mchp) / l.mchp AS mchp
+, (h.mck - l.mck) / l.mck AS mck
+, (h.mco - l.mco) / l.mco AS mco
+, (h.mdlz - l.mdlz) / l.mdlz AS mdlz
+, (h.mdt - l.mdt) / l.mdt AS mdt
+, (h.met - l.met) / l.met AS met
+, (h.mhfi - l.mhfi) / l.mhfi AS mhfi
+, (h.mjn - l.mjn) / l.mjn AS mjn
+, (h.mkc - l.mkc) / l.mkc AS mkc
+, (h.mmc - l.mmc) / l.mmc AS mmc
+, (h.mmm - l.mmm) / l.mmm AS mmm
+, (h.mnst - l.mnst) / l.mnst AS mnst
+, (h.mo - l.mo) / l.mo AS mo
+, (h.molx - l.molx) / l.molx AS molx
+, (h.mon - l.mon) / l.mon AS mon
+, (h.mos - l.mos) / l.mos AS mos
+, (h.mpc - l.mpc) / l.mpc AS mpc
+, (h.mrk - l.mrk) / l.mrk AS mrk
+, (h.mro - l.mro) / l.mro AS mro
+, (h.ms - l.ms) / l.ms AS ms
+, (h.msft - l.msft) / l.msft AS msft
+, (h.msi - l.msi) / l.msi AS msi
+, (h.mtb - l.mtb) / l.mtb AS mtb
+, (h.mu - l.mu) / l.mu AS mu
+, (h.mur - l.mur) / l.mur AS mur
+, (h.mwv - l.mwv) / l.mwv AS mwv
+, (h.myl - l.myl) / l.myl AS myl
+, (h.nbl - l.nbl) / l.nbl AS nbl
+, (h.nbr - l.nbr) / l.nbr AS nbr
+, (h.ndaq - l.ndaq) / l.ndaq AS ndaq
+, (h.ne - l.ne) / l.ne AS ne
+, (h.nee - l.nee) / l.nee AS nee
+, (h.nem - l.nem) / l.nem AS nem
+, (h.nflx - l.nflx) / l.nflx AS nflx
+, (h.nfx - l.nfx) / l.nfx AS nfx
+, (h.ni - l.ni) / l.ni AS ni
+, (h.nke - l.nke) / l.nke AS nke
+, (h.noc - l.noc) / l.noc AS noc
+, (h.nov - l.nov) / l.nov AS nov
+, (h.nrg - l.nrg) / l.nrg AS nrg
+, (h.nsc - l.nsc) / l.nsc AS nsc
+, (h.ntap - l.ntap) / l.ntap AS ntap
+, (h.ntrs - l.ntrs) / l.ntrs AS ntrs
+, (h.nu - l.nu) / l.nu AS nu
+, (h.nue - l.nue) / l.nue AS nue
+, (h.nvda - l.nvda) / l.nvda AS nvda
+, (h.nwl - l.nwl) / l.nwl AS nwl
+, (h.nwsa - l.nwsa) / l.nwsa AS nwsa
+, (h.nyx - l.nyx) / l.nyx AS nyx
+, (h.oi - l.oi) / l.oi AS oi
+, (h.oke - l.oke) / l.oke AS oke
+, (h.omc - l.omc) / l.omc AS omc
+, (h.orcl - l.orcl) / l.orcl AS orcl
+, (h.orly - l.orly) / l.orly AS orly
+, (h.oxy - l.oxy) / l.oxy AS oxy
+, (h.payx - l.payx) / l.payx AS payx
+, (h.pbct - l.pbct) / l.pbct AS pbct
+, (h.pbi - l.pbi) / l.pbi AS pbi
+, (h.pcar - l.pcar) / l.pcar AS pcar
+, (h.pcg - l.pcg) / l.pcg AS pcg
+, (h.pcl - l.pcl) / l.pcl AS pcl
+, (h.pcln - l.pcln) / l.pcln AS pcln
+, (h.pcp - l.pcp) / l.pcp AS pcp
+, (h.pcs - l.pcs) / l.pcs AS pcs
+, (h.pdco - l.pdco) / l.pdco AS pdco
+, (h.peg - l.peg) / l.peg AS peg
+, (h.pep - l.pep) / l.pep AS pep
+, (h.petm - l.petm) / l.petm AS petm
+, (h.pfe - l.pfe) / l.pfe AS pfe
+, (h.pfg - l.pfg) / l.pfg AS pfg
+, (h.pg - l.pg) / l.pg AS pg
+, (h.pgr - l.pgr) / l.pgr AS pgr
+, (h.ph - l.ph) / l.ph AS ph
+, (h.phm - l.phm) / l.phm AS phm
+, (h.pki - l.pki) / l.pki AS pki
+, (h.pld - l.pld) / l.pld AS pld
+, (h.pll - l.pll) / l.pll AS pll
+, (h.pm - l.pm) / l.pm AS pm
+, (h.pnc - l.pnc) / l.pnc AS pnc
+, (h.pnr - l.pnr) / l.pnr AS pnr
+, (h.pnw - l.pnw) / l.pnw AS pnw
+, (h.pom - l.pom) / l.pom AS pom
+, (h.ppg - l.ppg) / l.ppg AS ppg
+, (h.ppl - l.ppl) / l.ppl AS ppl
+, (h.prgo - l.prgo) / l.prgo AS prgo
+, (h.pru - l.pru) / l.pru AS pru
+, (h.psa - l.psa) / l.psa AS psa
+, (h.psx - l.psx) / l.psx AS psx
+, (h.pvh - l.pvh) / l.pvh AS pvh
+, (h.pwr - l.pwr) / l.pwr AS pwr
+, (h.px - l.px) / l.px AS px
+, (h.pxd - l.pxd) / l.pxd AS pxd
+, (h.qcom - l.qcom) / l.qcom AS qcom
+, (h.qep - l.qep) / l.qep AS qep
+, (h.r - l.r) / l.r AS r
+, (h.rai - l.rai) / l.rai AS rai
+, (h.rdc - l.rdc) / l.rdc AS rdc
+, (h.rf - l.rf) / l.rf AS rf
+, (h.rhi - l.rhi) / l.rhi AS rhi
+, (h.rht - l.rht) / l.rht AS rht
+, (h.rl - l.rl) / l.rl AS rl
+, (h.rok - l.rok) / l.rok AS rok
+, (h.rop - l.rop) / l.rop AS rop
+, (h.rost - l.rost) / l.rost AS rost
+, (h.rrc - l.rrc) / l.rrc AS rrc
+, (h.rsg - l.rsg) / l.rsg AS rsg
+, (h.rtn - l.rtn) / l.rtn AS rtn
+, (h.s - l.s) / l.s AS s
+, (h.sai - l.sai) / l.sai AS sai
+, (h.sbux - l.sbux) / l.sbux AS sbux
+, (h.scg - l.scg) / l.scg AS scg
+, (h.schw - l.schw) / l.schw AS schw
+, (h.se - l.se) / l.se AS se
+, (h.see - l.see) / l.see AS see
+, (h.shw - l.shw) / l.shw AS shw
+, (h.sial - l.sial) / l.sial AS sial
+, (h.sjm - l.sjm) / l.sjm AS sjm
+, (h.slb - l.slb) / l.slb AS slb
+, (h.slm - l.slm) / l.slm AS slm
+, (h.sna - l.sna) / l.sna AS sna
+, (h.sndk - l.sndk) / l.sndk AS sndk
+, (h.sni - l.sni) / l.sni AS sni
+, (h.so - l.so) / l.so AS so
+, (h.spg - l.spg) / l.spg AS spg
+, (h.spls - l.spls) / l.spls AS spls
+, (h.srcl - l.srcl) / l.srcl AS srcl
+, (h.sre - l.sre) / l.sre AS sre
+, (h.sti - l.sti) / l.sti AS sti
+, (h.stj - l.stj) / l.stj AS stj
+, (h.stt - l.stt) / l.stt AS stt
+, (h.stx - l.stx) / l.stx AS stx
+, (h.stz - l.stz) / l.stz AS stz
+, (h.swk - l.swk) / l.swk AS swk
+, (h.swn - l.swn) / l.swn AS swn
+, (h.swy - l.swy) / l.swy AS swy
+, (h.syk - l.syk) / l.syk AS syk
+, (h.symc - l.symc) / l.symc AS symc
+, (h.syy - l.syy) / l.syy AS syy
+, (h.t - l.t) / l.t AS t
+, (h.tap - l.tap) / l.tap AS tap
+, (h.tdc - l.tdc) / l.tdc AS tdc
+, (h.te - l.te) / l.te AS te
+, (h.teg - l.teg) / l.teg AS teg
+, (h.tel - l.tel) / l.tel AS tel
+, (h.ter - l.ter) / l.ter AS ter
+, (h.tgt - l.tgt) / l.tgt AS tgt
+, (h.thc - l.thc) / l.thc AS thc
+, (h.tif - l.tif) / l.tif AS tif
+, (h.tjx - l.tjx) / l.tjx AS tjx
+, (h.tmk - l.tmk) / l.tmk AS tmk
+, (h.tmo - l.tmo) / l.tmo AS tmo
+, (h.trip - l.trip) / l.trip AS trip
+, (h.trow - l.trow) / l.trow AS trow
+, (h.trv - l.trv) / l.trv AS trv
+, (h.tsn - l.tsn) / l.tsn AS tsn
+, (h.tso - l.tso) / l.tso AS tso
+, (h.tss - l.tss) / l.tss AS tss
+, (h.twc - l.twc) / l.twc AS twc
+, (h.twx - l.twx) / l.twx AS twx
+, (h.txn - l.txn) / l.txn AS txn
+, (h.txt - l.txt) / l.txt AS txt
+, (h.tyc - l.tyc) / l.tyc AS tyc
+, (h.unh - l.unh) / l.unh AS unh
+, (h.unm - l.unm) / l.unm AS unm
+, (h.unp - l.unp) / l.unp AS unp
+, (h.ups - l.ups) / l.ups AS ups
+, (h.urbn - l.urbn) / l.urbn AS urbn
+, (h.usb - l.usb) / l.usb AS usb
+, (h.utx - l.utx) / l.utx AS utx
+, (h.v - l.v) / l.v AS v
+, (h.var - l.var) / l.var AS var
+, (h.vfc - l.vfc) / l.vfc AS vfc
+, (h.viab - l.viab) / l.viab AS viab
+, (h.vlo - l.vlo) / l.vlo AS vlo
+, (h.vmc - l.vmc) / l.vmc AS vmc
+, (h.vno - l.vno) / l.vno AS vno
+, (h.vrsn - l.vrsn) / l.vrsn AS vrsn
+, (h.vtr - l.vtr) / l.vtr AS vtr
+, (h.vz - l.vz) / l.vz AS vz
+, (h.wag - l.wag) / l.wag AS wag
+, (h.wat - l.wat) / l.wat AS wat
+, (h.wdc - l.wdc) / l.wdc AS wdc
+, (h.wec - l.wec) / l.wec AS wec
+, (h.wfc - l.wfc) / l.wfc AS wfc
+, (h.wfm - l.wfm) / l.wfm AS wfm
+, (h.whr - l.whr) / l.whr AS whr
+, (h.win - l.win) / l.win AS win
+, (h.wlp - l.wlp) / l.wlp AS wlp
+, (h.wm - l.wm) / l.wm AS wm
+, (h.wmb - l.wmb) / l.wmb AS wmb
+, (h.wmt - l.wmt) / l.wmt AS wmt
+, (h.wpo - l.wpo) / l.wpo AS wpo
+, (h.wpx - l.wpx) / l.wpx AS wpx
+, (h.wu - l.wu) / l.wu AS wu
+, (h.wy - l.wy) / l.wy AS wy
+, (h.wyn - l.wyn) / l.wyn AS wyn
+, (h.wynn - l.wynn) / l.wynn AS wynn
+, (h.x - l.x) / l.x AS x
+, (h.xel - l.xel) / l.xel AS xel
+, (h.xl - l.xl) / l.xl AS xl
+, (h.xlnx - l.xlnx) / l.xlnx AS xlnx
+, (h.xom - l.xom) / l.xom AS xom
+, (h.xray - l.xray) / l.xray AS xray
+, (h.xrx - l.xrx) / l.xrx AS xrx
+, (h.xyl - l.xyl) / l.xyl AS xyl
+, (h.yhoo - l.yhoo) / l.yhoo AS yhoo
+, (h.yum - l.yum) / l.yum AS yum
+, (h.zion - l.zion) / l.zion AS zion
+, (h.zmh - l.zmh) / l.zmh AS zmh
+
+		FROM high AS h
+		JOIN low AS l
+			ON h.dt = l.dt
+			);
+			
+
+
+		CREATE OR REPLACE VIEW return AS (
+			WITH lag_close AS (
+				SELECT dt
+				, lag("a") OVER (ORDER BY dt) AS "a"
+, lag("aa") OVER (ORDER BY dt) AS "aa"
+, lag("aapl") OVER (ORDER BY dt) AS "aapl"
+, lag("abbv") OVER (ORDER BY dt) AS "abbv"
+, lag("abc") OVER (ORDER BY dt) AS "abc"
+, lag("abt") OVER (ORDER BY dt) AS "abt"
+, lag("ace") OVER (ORDER BY dt) AS "ace"
+, lag("acn") OVER (ORDER BY dt) AS "acn"
+, lag("act") OVER (ORDER BY dt) AS "act"
+, lag("adbe") OVER (ORDER BY dt) AS "adbe"
+, lag("adi") OVER (ORDER BY dt) AS "adi"
+, lag("adm") OVER (ORDER BY dt) AS "adm"
+, lag("adp") OVER (ORDER BY dt) AS "adp"
+, lag("adsk") OVER (ORDER BY dt) AS "adsk"
+, lag("adt") OVER (ORDER BY dt) AS "adt"
+, lag("aee") OVER (ORDER BY dt) AS "aee"
+, lag("aep") OVER (ORDER BY dt) AS "aep"
+, lag("aes") OVER (ORDER BY dt) AS "aes"
+, lag("aet") OVER (ORDER BY dt) AS "aet"
+, lag("afl") OVER (ORDER BY dt) AS "afl"
+, lag("agn") OVER (ORDER BY dt) AS "agn"
+, lag("aig") OVER (ORDER BY dt) AS "aig"
+, lag("aiv") OVER (ORDER BY dt) AS "aiv"
+, lag("aiz") OVER (ORDER BY dt) AS "aiz"
+, lag("akam") OVER (ORDER BY dt) AS "akam"
+, lag("all") OVER (ORDER BY dt) AS "all"
+, lag("altr") OVER (ORDER BY dt) AS "altr"
+, lag("alxn") OVER (ORDER BY dt) AS "alxn"
+, lag("amat") OVER (ORDER BY dt) AS "amat"
+, lag("amd") OVER (ORDER BY dt) AS "amd"
+, lag("amgn") OVER (ORDER BY dt) AS "amgn"
+, lag("amp") OVER (ORDER BY dt) AS "amp"
+, lag("amt") OVER (ORDER BY dt) AS "amt"
+, lag("amzn") OVER (ORDER BY dt) AS "amzn"
+, lag("an") OVER (ORDER BY dt) AS "an"
+, lag("anf") OVER (ORDER BY dt) AS "anf"
+, lag("aon") OVER (ORDER BY dt) AS "aon"
+, lag("apa") OVER (ORDER BY dt) AS "apa"
+, lag("apc") OVER (ORDER BY dt) AS "apc"
+, lag("apd") OVER (ORDER BY dt) AS "apd"
+, lag("aph") OVER (ORDER BY dt) AS "aph"
+, lag("apol") OVER (ORDER BY dt) AS "apol"
+, lag("arg") OVER (ORDER BY dt) AS "arg"
+, lag("ati") OVER (ORDER BY dt) AS "ati"
+, lag("avb") OVER (ORDER BY dt) AS "avb"
+, lag("avp") OVER (ORDER BY dt) AS "avp"
+, lag("avy") OVER (ORDER BY dt) AS "avy"
+, lag("axp") OVER (ORDER BY dt) AS "axp"
+, lag("azo") OVER (ORDER BY dt) AS "azo"
+, lag("ba") OVER (ORDER BY dt) AS "ba"
+, lag("bac") OVER (ORDER BY dt) AS "bac"
+, lag("bax") OVER (ORDER BY dt) AS "bax"
+, lag("bbby") OVER (ORDER BY dt) AS "bbby"
+, lag("bbt") OVER (ORDER BY dt) AS "bbt"
+, lag("bby") OVER (ORDER BY dt) AS "bby"
+, lag("bcr") OVER (ORDER BY dt) AS "bcr"
+, lag("bdx") OVER (ORDER BY dt) AS "bdx"
+, lag("beam") OVER (ORDER BY dt) AS "beam"
+, lag("ben") OVER (ORDER BY dt) AS "ben"
+, lag("bf") OVER (ORDER BY dt) AS "bf"
+, lag("bhi") OVER (ORDER BY dt) AS "bhi"
+, lag("biib") OVER (ORDER BY dt) AS "biib"
+, lag("bk") OVER (ORDER BY dt) AS "bk"
+, lag("blk") OVER (ORDER BY dt) AS "blk"
+, lag("bll") OVER (ORDER BY dt) AS "bll"
+, lag("bmc") OVER (ORDER BY dt) AS "bmc"
+, lag("bms") OVER (ORDER BY dt) AS "bms"
+, lag("bmy") OVER (ORDER BY dt) AS "bmy"
+, lag("brcm") OVER (ORDER BY dt) AS "brcm"
+, lag("brkb") OVER (ORDER BY dt) AS "brkb"
+, lag("bsx") OVER (ORDER BY dt) AS "bsx"
+, lag("btu") OVER (ORDER BY dt) AS "btu"
+, lag("bwa") OVER (ORDER BY dt) AS "bwa"
+, lag("bxp") OVER (ORDER BY dt) AS "bxp"
+, lag("c") OVER (ORDER BY dt) AS "c"
+, lag("ca") OVER (ORDER BY dt) AS "ca"
+, lag("cag") OVER (ORDER BY dt) AS "cag"
+, lag("cah") OVER (ORDER BY dt) AS "cah"
+, lag("cam") OVER (ORDER BY dt) AS "cam"
+, lag("cat") OVER (ORDER BY dt) AS "cat"
+, lag("cb") OVER (ORDER BY dt) AS "cb"
+, lag("cbg") OVER (ORDER BY dt) AS "cbg"
+, lag("cbs") OVER (ORDER BY dt) AS "cbs"
+, lag("cce") OVER (ORDER BY dt) AS "cce"
+, lag("cci") OVER (ORDER BY dt) AS "cci"
+, lag("ccl") OVER (ORDER BY dt) AS "ccl"
+, lag("celg") OVER (ORDER BY dt) AS "celg"
+, lag("cern") OVER (ORDER BY dt) AS "cern"
+, lag("cf") OVER (ORDER BY dt) AS "cf"
+, lag("cfn") OVER (ORDER BY dt) AS "cfn"
+, lag("chk") OVER (ORDER BY dt) AS "chk"
+, lag("chrw") OVER (ORDER BY dt) AS "chrw"
+, lag("ci") OVER (ORDER BY dt) AS "ci"
+, lag("cinf") OVER (ORDER BY dt) AS "cinf"
+, lag("cl") OVER (ORDER BY dt) AS "cl"
+, lag("clf") OVER (ORDER BY dt) AS "clf"
+, lag("clx") OVER (ORDER BY dt) AS "clx"
+, lag("cma") OVER (ORDER BY dt) AS "cma"
+, lag("cmcsa") OVER (ORDER BY dt) AS "cmcsa"
+, lag("cme") OVER (ORDER BY dt) AS "cme"
+, lag("cmg") OVER (ORDER BY dt) AS "cmg"
+, lag("cmi") OVER (ORDER BY dt) AS "cmi"
+, lag("cms") OVER (ORDER BY dt) AS "cms"
+, lag("cnp") OVER (ORDER BY dt) AS "cnp"
+, lag("cnx") OVER (ORDER BY dt) AS "cnx"
+, lag("cof") OVER (ORDER BY dt) AS "cof"
+, lag("cog") OVER (ORDER BY dt) AS "cog"
+, lag("coh") OVER (ORDER BY dt) AS "coh"
+, lag("col") OVER (ORDER BY dt) AS "col"
+, lag("cop") OVER (ORDER BY dt) AS "cop"
+, lag("cost") OVER (ORDER BY dt) AS "cost"
+, lag("cov") OVER (ORDER BY dt) AS "cov"
+, lag("cpb") OVER (ORDER BY dt) AS "cpb"
+, lag("crm") OVER (ORDER BY dt) AS "crm"
+, lag("csc") OVER (ORDER BY dt) AS "csc"
+, lag("csco") OVER (ORDER BY dt) AS "csco"
+, lag("csx") OVER (ORDER BY dt) AS "csx"
+, lag("ctas") OVER (ORDER BY dt) AS "ctas"
+, lag("ctl") OVER (ORDER BY dt) AS "ctl"
+, lag("ctsh") OVER (ORDER BY dt) AS "ctsh"
+, lag("ctxs") OVER (ORDER BY dt) AS "ctxs"
+, lag("cvc") OVER (ORDER BY dt) AS "cvc"
+, lag("cvh") OVER (ORDER BY dt) AS "cvh"
+, lag("cvs") OVER (ORDER BY dt) AS "cvs"
+, lag("cvx") OVER (ORDER BY dt) AS "cvx"
+, lag("d") OVER (ORDER BY dt) AS "d"
+, lag("dd") OVER (ORDER BY dt) AS "dd"
+, lag("de") OVER (ORDER BY dt) AS "de"
+, lag("dell") OVER (ORDER BY dt) AS "dell"
+, lag("df") OVER (ORDER BY dt) AS "df"
+, lag("dfs") OVER (ORDER BY dt) AS "dfs"
+, lag("dg") OVER (ORDER BY dt) AS "dg"
+, lag("dgx") OVER (ORDER BY dt) AS "dgx"
+, lag("dhi") OVER (ORDER BY dt) AS "dhi"
+, lag("dhr") OVER (ORDER BY dt) AS "dhr"
+, lag("dis") OVER (ORDER BY dt) AS "dis"
+, lag("disca") OVER (ORDER BY dt) AS "disca"
+, lag("dlph") OVER (ORDER BY dt) AS "dlph"
+, lag("dltr") OVER (ORDER BY dt) AS "dltr"
+, lag("dnb") OVER (ORDER BY dt) AS "dnb"
+, lag("dnr") OVER (ORDER BY dt) AS "dnr"
+, lag("do") OVER (ORDER BY dt) AS "do"
+, lag("dov") OVER (ORDER BY dt) AS "dov"
+, lag("dow") OVER (ORDER BY dt) AS "dow"
+, lag("dps") OVER (ORDER BY dt) AS "dps"
+, lag("dri") OVER (ORDER BY dt) AS "dri"
+, lag("dte") OVER (ORDER BY dt) AS "dte"
+, lag("dtv") OVER (ORDER BY dt) AS "dtv"
+, lag("duk") OVER (ORDER BY dt) AS "duk"
+, lag("dva") OVER (ORDER BY dt) AS "dva"
+, lag("dvn") OVER (ORDER BY dt) AS "dvn"
+, lag("ea") OVER (ORDER BY dt) AS "ea"
+, lag("ebay") OVER (ORDER BY dt) AS "ebay"
+, lag("ecl") OVER (ORDER BY dt) AS "ecl"
+, lag("ed") OVER (ORDER BY dt) AS "ed"
+, lag("efx") OVER (ORDER BY dt) AS "efx"
+, lag("eix") OVER (ORDER BY dt) AS "eix"
+, lag("el") OVER (ORDER BY dt) AS "el"
+, lag("emc") OVER (ORDER BY dt) AS "emc"
+, lag("emn") OVER (ORDER BY dt) AS "emn"
+, lag("emr") OVER (ORDER BY dt) AS "emr"
+, lag("eog") OVER (ORDER BY dt) AS "eog"
+, lag("eqr") OVER (ORDER BY dt) AS "eqr"
+, lag("eqt") OVER (ORDER BY dt) AS "eqt"
+, lag("esrx") OVER (ORDER BY dt) AS "esrx"
+, lag("esv") OVER (ORDER BY dt) AS "esv"
+, lag("etfc") OVER (ORDER BY dt) AS "etfc"
+, lag("etn") OVER (ORDER BY dt) AS "etn"
+, lag("etr") OVER (ORDER BY dt) AS "etr"
+, lag("ew") OVER (ORDER BY dt) AS "ew"
+, lag("exc") OVER (ORDER BY dt) AS "exc"
+, lag("expd") OVER (ORDER BY dt) AS "expd"
+, lag("expe") OVER (ORDER BY dt) AS "expe"
+, lag("f") OVER (ORDER BY dt) AS "f"
+, lag("fast") OVER (ORDER BY dt) AS "fast"
+, lag("fcx") OVER (ORDER BY dt) AS "fcx"
+, lag("fdo") OVER (ORDER BY dt) AS "fdo"
+, lag("fdx") OVER (ORDER BY dt) AS "fdx"
+, lag("fe") OVER (ORDER BY dt) AS "fe"
+, lag("ffiv") OVER (ORDER BY dt) AS "ffiv"
+, lag("fhn") OVER (ORDER BY dt) AS "fhn"
+, lag("fis") OVER (ORDER BY dt) AS "fis"
+, lag("fisv") OVER (ORDER BY dt) AS "fisv"
+, lag("fitb") OVER (ORDER BY dt) AS "fitb"
+, lag("flir") OVER (ORDER BY dt) AS "flir"
+, lag("flr") OVER (ORDER BY dt) AS "flr"
+, lag("fls") OVER (ORDER BY dt) AS "fls"
+, lag("fmc") OVER (ORDER BY dt) AS "fmc"
+, lag("fosl") OVER (ORDER BY dt) AS "fosl"
+, lag("frx") OVER (ORDER BY dt) AS "frx"
+, lag("fslr") OVER (ORDER BY dt) AS "fslr"
+, lag("fti") OVER (ORDER BY dt) AS "fti"
+, lag("ftr") OVER (ORDER BY dt) AS "ftr"
+, lag("gas") OVER (ORDER BY dt) AS "gas"
+, lag("gci") OVER (ORDER BY dt) AS "gci"
+, lag("gd") OVER (ORDER BY dt) AS "gd"
+, lag("ge") OVER (ORDER BY dt) AS "ge"
+, lag("gild") OVER (ORDER BY dt) AS "gild"
+, lag("gis") OVER (ORDER BY dt) AS "gis"
+, lag("glw") OVER (ORDER BY dt) AS "glw"
+, lag("gme") OVER (ORDER BY dt) AS "gme"
+, lag("gnw") OVER (ORDER BY dt) AS "gnw"
+, lag("goog") OVER (ORDER BY dt) AS "goog"
+, lag("gpc") OVER (ORDER BY dt) AS "gpc"
+, lag("gps") OVER (ORDER BY dt) AS "gps"
+, lag("grmn") OVER (ORDER BY dt) AS "grmn"
+, lag("gs") OVER (ORDER BY dt) AS "gs"
+, lag("gt") OVER (ORDER BY dt) AS "gt"
+, lag("gww") OVER (ORDER BY dt) AS "gww"
+, lag("hal") OVER (ORDER BY dt) AS "hal"
+, lag("har") OVER (ORDER BY dt) AS "har"
+, lag("has") OVER (ORDER BY dt) AS "has"
+, lag("hban") OVER (ORDER BY dt) AS "hban"
+, lag("hcbk") OVER (ORDER BY dt) AS "hcbk"
+, lag("hcn") OVER (ORDER BY dt) AS "hcn"
+, lag("hcp") OVER (ORDER BY dt) AS "hcp"
+, lag("hd") OVER (ORDER BY dt) AS "hd"
+, lag("hes") OVER (ORDER BY dt) AS "hes"
+, lag("hig") OVER (ORDER BY dt) AS "hig"
+, lag("hnz") OVER (ORDER BY dt) AS "hnz"
+, lag("hog") OVER (ORDER BY dt) AS "hog"
+, lag("hon") OVER (ORDER BY dt) AS "hon"
+, lag("hot") OVER (ORDER BY dt) AS "hot"
+, lag("hp") OVER (ORDER BY dt) AS "hp"
+, lag("hpq") OVER (ORDER BY dt) AS "hpq"
+, lag("hrb") OVER (ORDER BY dt) AS "hrb"
+, lag("hrl") OVER (ORDER BY dt) AS "hrl"
+, lag("hrs") OVER (ORDER BY dt) AS "hrs"
+, lag("hsp") OVER (ORDER BY dt) AS "hsp"
+, lag("hst") OVER (ORDER BY dt) AS "hst"
+, lag("hsy") OVER (ORDER BY dt) AS "hsy"
+, lag("hum") OVER (ORDER BY dt) AS "hum"
+, lag("ibm") OVER (ORDER BY dt) AS "ibm"
+, lag("ice") OVER (ORDER BY dt) AS "ice"
+, lag("iff") OVER (ORDER BY dt) AS "iff"
+, lag("igt") OVER (ORDER BY dt) AS "igt"
+, lag("intc") OVER (ORDER BY dt) AS "intc"
+, lag("intu") OVER (ORDER BY dt) AS "intu"
+, lag("ip") OVER (ORDER BY dt) AS "ip"
+, lag("ipg") OVER (ORDER BY dt) AS "ipg"
+, lag("ir") OVER (ORDER BY dt) AS "ir"
+, lag("irm") OVER (ORDER BY dt) AS "irm"
+, lag("isrg") OVER (ORDER BY dt) AS "isrg"
+, lag("itw") OVER (ORDER BY dt) AS "itw"
+, lag("ivz") OVER (ORDER BY dt) AS "ivz"
+, lag("jbl") OVER (ORDER BY dt) AS "jbl"
+, lag("jci") OVER (ORDER BY dt) AS "jci"
+, lag("jcp") OVER (ORDER BY dt) AS "jcp"
+, lag("jdsu") OVER (ORDER BY dt) AS "jdsu"
+, lag("jec") OVER (ORDER BY dt) AS "jec"
+, lag("jnj") OVER (ORDER BY dt) AS "jnj"
+, lag("jnpr") OVER (ORDER BY dt) AS "jnpr"
+, lag("joy") OVER (ORDER BY dt) AS "joy"
+, lag("jpm") OVER (ORDER BY dt) AS "jpm"
+, lag("jwn") OVER (ORDER BY dt) AS "jwn"
+, lag("k") OVER (ORDER BY dt) AS "k"
+, lag("key") OVER (ORDER BY dt) AS "key"
+, lag("kim") OVER (ORDER BY dt) AS "kim"
+, lag("klac") OVER (ORDER BY dt) AS "klac"
+, lag("kmb") OVER (ORDER BY dt) AS "kmb"
+, lag("kmi") OVER (ORDER BY dt) AS "kmi"
+, lag("kmx") OVER (ORDER BY dt) AS "kmx"
+, lag("ko") OVER (ORDER BY dt) AS "ko"
+, lag("kr") OVER (ORDER BY dt) AS "kr"
+, lag("krft") OVER (ORDER BY dt) AS "krft"
+, lag("kss") OVER (ORDER BY dt) AS "kss"
+, lag("l") OVER (ORDER BY dt) AS "l"
+, lag("leg") OVER (ORDER BY dt) AS "leg"
+, lag("len") OVER (ORDER BY dt) AS "len"
+, lag("lh") OVER (ORDER BY dt) AS "lh"
+, lag("life") OVER (ORDER BY dt) AS "life"
+, lag("lll") OVER (ORDER BY dt) AS "lll"
+, lag("lltc") OVER (ORDER BY dt) AS "lltc"
+, lag("lly") OVER (ORDER BY dt) AS "lly"
+, lag("lm") OVER (ORDER BY dt) AS "lm"
+, lag("lmt") OVER (ORDER BY dt) AS "lmt"
+, lag("lnc") OVER (ORDER BY dt) AS "lnc"
+, lag("lo") OVER (ORDER BY dt) AS "lo"
+, lag("low") OVER (ORDER BY dt) AS "low"
+, lag("lrcx") OVER (ORDER BY dt) AS "lrcx"
+, lag("lsi") OVER (ORDER BY dt) AS "lsi"
+, lag("ltd") OVER (ORDER BY dt) AS "ltd"
+, lag("luk") OVER (ORDER BY dt) AS "luk"
+, lag("luv") OVER (ORDER BY dt) AS "luv"
+, lag("lyb") OVER (ORDER BY dt) AS "lyb"
+, lag("m") OVER (ORDER BY dt) AS "m"
+, lag("ma") OVER (ORDER BY dt) AS "ma"
+, lag("mar") OVER (ORDER BY dt) AS "mar"
+, lag("mas") OVER (ORDER BY dt) AS "mas"
+, lag("mat") OVER (ORDER BY dt) AS "mat"
+, lag("mcd") OVER (ORDER BY dt) AS "mcd"
+, lag("mchp") OVER (ORDER BY dt) AS "mchp"
+, lag("mck") OVER (ORDER BY dt) AS "mck"
+, lag("mco") OVER (ORDER BY dt) AS "mco"
+, lag("mdlz") OVER (ORDER BY dt) AS "mdlz"
+, lag("mdt") OVER (ORDER BY dt) AS "mdt"
+, lag("met") OVER (ORDER BY dt) AS "met"
+, lag("mhfi") OVER (ORDER BY dt) AS "mhfi"
+, lag("mjn") OVER (ORDER BY dt) AS "mjn"
+, lag("mkc") OVER (ORDER BY dt) AS "mkc"
+, lag("mmc") OVER (ORDER BY dt) AS "mmc"
+, lag("mmm") OVER (ORDER BY dt) AS "mmm"
+, lag("mnst") OVER (ORDER BY dt) AS "mnst"
+, lag("mo") OVER (ORDER BY dt) AS "mo"
+, lag("molx") OVER (ORDER BY dt) AS "molx"
+, lag("mon") OVER (ORDER BY dt) AS "mon"
+, lag("mos") OVER (ORDER BY dt) AS "mos"
+, lag("mpc") OVER (ORDER BY dt) AS "mpc"
+, lag("mrk") OVER (ORDER BY dt) AS "mrk"
+, lag("mro") OVER (ORDER BY dt) AS "mro"
+, lag("ms") OVER (ORDER BY dt) AS "ms"
+, lag("msft") OVER (ORDER BY dt) AS "msft"
+, lag("msi") OVER (ORDER BY dt) AS "msi"
+, lag("mtb") OVER (ORDER BY dt) AS "mtb"
+, lag("mu") OVER (ORDER BY dt) AS "mu"
+, lag("mur") OVER (ORDER BY dt) AS "mur"
+, lag("mwv") OVER (ORDER BY dt) AS "mwv"
+, lag("myl") OVER (ORDER BY dt) AS "myl"
+, lag("nbl") OVER (ORDER BY dt) AS "nbl"
+, lag("nbr") OVER (ORDER BY dt) AS "nbr"
+, lag("ndaq") OVER (ORDER BY dt) AS "ndaq"
+, lag("ne") OVER (ORDER BY dt) AS "ne"
+, lag("nee") OVER (ORDER BY dt) AS "nee"
+, lag("nem") OVER (ORDER BY dt) AS "nem"
+, lag("nflx") OVER (ORDER BY dt) AS "nflx"
+, lag("nfx") OVER (ORDER BY dt) AS "nfx"
+, lag("ni") OVER (ORDER BY dt) AS "ni"
+, lag("nke") OVER (ORDER BY dt) AS "nke"
+, lag("noc") OVER (ORDER BY dt) AS "noc"
+, lag("nov") OVER (ORDER BY dt) AS "nov"
+, lag("nrg") OVER (ORDER BY dt) AS "nrg"
+, lag("nsc") OVER (ORDER BY dt) AS "nsc"
+, lag("ntap") OVER (ORDER BY dt) AS "ntap"
+, lag("ntrs") OVER (ORDER BY dt) AS "ntrs"
+, lag("nu") OVER (ORDER BY dt) AS "nu"
+, lag("nue") OVER (ORDER BY dt) AS "nue"
+, lag("nvda") OVER (ORDER BY dt) AS "nvda"
+, lag("nwl") OVER (ORDER BY dt) AS "nwl"
+, lag("nwsa") OVER (ORDER BY dt) AS "nwsa"
+, lag("nyx") OVER (ORDER BY dt) AS "nyx"
+, lag("oi") OVER (ORDER BY dt) AS "oi"
+, lag("oke") OVER (ORDER BY dt) AS "oke"
+, lag("omc") OVER (ORDER BY dt) AS "omc"
+, lag("orcl") OVER (ORDER BY dt) AS "orcl"
+, lag("orly") OVER (ORDER BY dt) AS "orly"
+, lag("oxy") OVER (ORDER BY dt) AS "oxy"
+, lag("payx") OVER (ORDER BY dt) AS "payx"
+, lag("pbct") OVER (ORDER BY dt) AS "pbct"
+, lag("pbi") OVER (ORDER BY dt) AS "pbi"
+, lag("pcar") OVER (ORDER BY dt) AS "pcar"
+, lag("pcg") OVER (ORDER BY dt) AS "pcg"
+, lag("pcl") OVER (ORDER BY dt) AS "pcl"
+, lag("pcln") OVER (ORDER BY dt) AS "pcln"
+, lag("pcp") OVER (ORDER BY dt) AS "pcp"
+, lag("pcs") OVER (ORDER BY dt) AS "pcs"
+, lag("pdco") OVER (ORDER BY dt) AS "pdco"
+, lag("peg") OVER (ORDER BY dt) AS "peg"
+, lag("pep") OVER (ORDER BY dt) AS "pep"
+, lag("petm") OVER (ORDER BY dt) AS "petm"
+, lag("pfe") OVER (ORDER BY dt) AS "pfe"
+, lag("pfg") OVER (ORDER BY dt) AS "pfg"
+, lag("pg") OVER (ORDER BY dt) AS "pg"
+, lag("pgr") OVER (ORDER BY dt) AS "pgr"
+, lag("ph") OVER (ORDER BY dt) AS "ph"
+, lag("phm") OVER (ORDER BY dt) AS "phm"
+, lag("pki") OVER (ORDER BY dt) AS "pki"
+, lag("pld") OVER (ORDER BY dt) AS "pld"
+, lag("pll") OVER (ORDER BY dt) AS "pll"
+, lag("pm") OVER (ORDER BY dt) AS "pm"
+, lag("pnc") OVER (ORDER BY dt) AS "pnc"
+, lag("pnr") OVER (ORDER BY dt) AS "pnr"
+, lag("pnw") OVER (ORDER BY dt) AS "pnw"
+, lag("pom") OVER (ORDER BY dt) AS "pom"
+, lag("ppg") OVER (ORDER BY dt) AS "ppg"
+, lag("ppl") OVER (ORDER BY dt) AS "ppl"
+, lag("prgo") OVER (ORDER BY dt) AS "prgo"
+, lag("pru") OVER (ORDER BY dt) AS "pru"
+, lag("psa") OVER (ORDER BY dt) AS "psa"
+, lag("psx") OVER (ORDER BY dt) AS "psx"
+, lag("pvh") OVER (ORDER BY dt) AS "pvh"
+, lag("pwr") OVER (ORDER BY dt) AS "pwr"
+, lag("px") OVER (ORDER BY dt) AS "px"
+, lag("pxd") OVER (ORDER BY dt) AS "pxd"
+, lag("qcom") OVER (ORDER BY dt) AS "qcom"
+, lag("qep") OVER (ORDER BY dt) AS "qep"
+, lag("r") OVER (ORDER BY dt) AS "r"
+, lag("rai") OVER (ORDER BY dt) AS "rai"
+, lag("rdc") OVER (ORDER BY dt) AS "rdc"
+, lag("rf") OVER (ORDER BY dt) AS "rf"
+, lag("rhi") OVER (ORDER BY dt) AS "rhi"
+, lag("rht") OVER (ORDER BY dt) AS "rht"
+, lag("rl") OVER (ORDER BY dt) AS "rl"
+, lag("rok") OVER (ORDER BY dt) AS "rok"
+, lag("rop") OVER (ORDER BY dt) AS "rop"
+, lag("rost") OVER (ORDER BY dt) AS "rost"
+, lag("rrc") OVER (ORDER BY dt) AS "rrc"
+, lag("rsg") OVER (ORDER BY dt) AS "rsg"
+, lag("rtn") OVER (ORDER BY dt) AS "rtn"
+, lag("s") OVER (ORDER BY dt) AS "s"
+, lag("sai") OVER (ORDER BY dt) AS "sai"
+, lag("sbux") OVER (ORDER BY dt) AS "sbux"
+, lag("scg") OVER (ORDER BY dt) AS "scg"
+, lag("schw") OVER (ORDER BY dt) AS "schw"
+, lag("se") OVER (ORDER BY dt) AS "se"
+, lag("see") OVER (ORDER BY dt) AS "see"
+, lag("shw") OVER (ORDER BY dt) AS "shw"
+, lag("sial") OVER (ORDER BY dt) AS "sial"
+, lag("sjm") OVER (ORDER BY dt) AS "sjm"
+, lag("slb") OVER (ORDER BY dt) AS "slb"
+, lag("slm") OVER (ORDER BY dt) AS "slm"
+, lag("sna") OVER (ORDER BY dt) AS "sna"
+, lag("sndk") OVER (ORDER BY dt) AS "sndk"
+, lag("sni") OVER (ORDER BY dt) AS "sni"
+, lag("so") OVER (ORDER BY dt) AS "so"
+, lag("spg") OVER (ORDER BY dt) AS "spg"
+, lag("spls") OVER (ORDER BY dt) AS "spls"
+, lag("srcl") OVER (ORDER BY dt) AS "srcl"
+, lag("sre") OVER (ORDER BY dt) AS "sre"
+, lag("sti") OVER (ORDER BY dt) AS "sti"
+, lag("stj") OVER (ORDER BY dt) AS "stj"
+, lag("stt") OVER (ORDER BY dt) AS "stt"
+, lag("stx") OVER (ORDER BY dt) AS "stx"
+, lag("stz") OVER (ORDER BY dt) AS "stz"
+, lag("swk") OVER (ORDER BY dt) AS "swk"
+, lag("swn") OVER (ORDER BY dt) AS "swn"
+, lag("swy") OVER (ORDER BY dt) AS "swy"
+, lag("syk") OVER (ORDER BY dt) AS "syk"
+, lag("symc") OVER (ORDER BY dt) AS "symc"
+, lag("syy") OVER (ORDER BY dt) AS "syy"
+, lag("t") OVER (ORDER BY dt) AS "t"
+, lag("tap") OVER (ORDER BY dt) AS "tap"
+, lag("tdc") OVER (ORDER BY dt) AS "tdc"
+, lag("te") OVER (ORDER BY dt) AS "te"
+, lag("teg") OVER (ORDER BY dt) AS "teg"
+, lag("tel") OVER (ORDER BY dt) AS "tel"
+, lag("ter") OVER (ORDER BY dt) AS "ter"
+, lag("tgt") OVER (ORDER BY dt) AS "tgt"
+, lag("thc") OVER (ORDER BY dt) AS "thc"
+, lag("tif") OVER (ORDER BY dt) AS "tif"
+, lag("tjx") OVER (ORDER BY dt) AS "tjx"
+, lag("tmk") OVER (ORDER BY dt) AS "tmk"
+, lag("tmo") OVER (ORDER BY dt) AS "tmo"
+, lag("trip") OVER (ORDER BY dt) AS "trip"
+, lag("trow") OVER (ORDER BY dt) AS "trow"
+, lag("trv") OVER (ORDER BY dt) AS "trv"
+, lag("tsn") OVER (ORDER BY dt) AS "tsn"
+, lag("tso") OVER (ORDER BY dt) AS "tso"
+, lag("tss") OVER (ORDER BY dt) AS "tss"
+, lag("twc") OVER (ORDER BY dt) AS "twc"
+, lag("twx") OVER (ORDER BY dt) AS "twx"
+, lag("txn") OVER (ORDER BY dt) AS "txn"
+, lag("txt") OVER (ORDER BY dt) AS "txt"
+, lag("tyc") OVER (ORDER BY dt) AS "tyc"
+, lag("unh") OVER (ORDER BY dt) AS "unh"
+, lag("unm") OVER (ORDER BY dt) AS "unm"
+, lag("unp") OVER (ORDER BY dt) AS "unp"
+, lag("ups") OVER (ORDER BY dt) AS "ups"
+, lag("urbn") OVER (ORDER BY dt) AS "urbn"
+, lag("usb") OVER (ORDER BY dt) AS "usb"
+, lag("utx") OVER (ORDER BY dt) AS "utx"
+, lag("v") OVER (ORDER BY dt) AS "v"
+, lag("var") OVER (ORDER BY dt) AS "var"
+, lag("vfc") OVER (ORDER BY dt) AS "vfc"
+, lag("viab") OVER (ORDER BY dt) AS "viab"
+, lag("vlo") OVER (ORDER BY dt) AS "vlo"
+, lag("vmc") OVER (ORDER BY dt) AS "vmc"
+, lag("vno") OVER (ORDER BY dt) AS "vno"
+, lag("vrsn") OVER (ORDER BY dt) AS "vrsn"
+, lag("vtr") OVER (ORDER BY dt) AS "vtr"
+, lag("vz") OVER (ORDER BY dt) AS "vz"
+, lag("wag") OVER (ORDER BY dt) AS "wag"
+, lag("wat") OVER (ORDER BY dt) AS "wat"
+, lag("wdc") OVER (ORDER BY dt) AS "wdc"
+, lag("wec") OVER (ORDER BY dt) AS "wec"
+, lag("wfc") OVER (ORDER BY dt) AS "wfc"
+, lag("wfm") OVER (ORDER BY dt) AS "wfm"
+, lag("whr") OVER (ORDER BY dt) AS "whr"
+, lag("win") OVER (ORDER BY dt) AS "win"
+, lag("wlp") OVER (ORDER BY dt) AS "wlp"
+, lag("wm") OVER (ORDER BY dt) AS "wm"
+, lag("wmb") OVER (ORDER BY dt) AS "wmb"
+, lag("wmt") OVER (ORDER BY dt) AS "wmt"
+, lag("wpo") OVER (ORDER BY dt) AS "wpo"
+, lag("wpx") OVER (ORDER BY dt) AS "wpx"
+, lag("wu") OVER (ORDER BY dt) AS "wu"
+, lag("wy") OVER (ORDER BY dt) AS "wy"
+, lag("wyn") OVER (ORDER BY dt) AS "wyn"
+, lag("wynn") OVER (ORDER BY dt) AS "wynn"
+, lag("x") OVER (ORDER BY dt) AS "x"
+, lag("xel") OVER (ORDER BY dt) AS "xel"
+, lag("xl") OVER (ORDER BY dt) AS "xl"
+, lag("xlnx") OVER (ORDER BY dt) AS "xlnx"
+, lag("xom") OVER (ORDER BY dt) AS "xom"
+, lag("xray") OVER (ORDER BY dt) AS "xray"
+, lag("xrx") OVER (ORDER BY dt) AS "xrx"
+, lag("xyl") OVER (ORDER BY dt) AS "xyl"
+, lag("yhoo") OVER (ORDER BY dt) AS "yhoo"
+, lag("yum") OVER (ORDER BY dt) AS "yum"
+, lag("zion") OVER (ORDER BY dt) AS "zion"
+, lag("zmh") OVER (ORDER BY dt) AS "zmh"
+
+		FROM close
+		)
+		SELECT
+		c.dt
+		,100 * (c.a - l.a) / l.a AS a
+,100 * (c.aa - l.aa) / l.aa AS aa
+,100 * (c.aapl - l.aapl) / l.aapl AS aapl
+,100 * (c.abbv - l.abbv) / l.abbv AS abbv
+,100 * (c.abc - l.abc) / l.abc AS abc
+,100 * (c.abt - l.abt) / l.abt AS abt
+,100 * (c.ace - l.ace) / l.ace AS ace
+,100 * (c.acn - l.acn) / l.acn AS acn
+,100 * (c.act - l.act) / l.act AS act
+,100 * (c.adbe - l.adbe) / l.adbe AS adbe
+,100 * (c.adi - l.adi) / l.adi AS adi
+,100 * (c.adm - l.adm) / l.adm AS adm
+,100 * (c.adp - l.adp) / l.adp AS adp
+,100 * (c.adsk - l.adsk) / l.adsk AS adsk
+,100 * (c.adt - l.adt) / l.adt AS adt
+,100 * (c.aee - l.aee) / l.aee AS aee
+,100 * (c.aep - l.aep) / l.aep AS aep
+,100 * (c.aes - l.aes) / l.aes AS aes
+,100 * (c.aet - l.aet) / l.aet AS aet
+,100 * (c.afl - l.afl) / l.afl AS afl
+,100 * (c.agn - l.agn) / l.agn AS agn
+,100 * (c.aig - l.aig) / l.aig AS aig
+,100 * (c.aiv - l.aiv) / l.aiv AS aiv
+,100 * (c.aiz - l.aiz) / l.aiz AS aiz
+,100 * (c.akam - l.akam) / l.akam AS akam
+,100 * (c.all - l.all) / l.all AS all
+,100 * (c.altr - l.altr) / l.altr AS altr
+,100 * (c.alxn - l.alxn) / l.alxn AS alxn
+,100 * (c.amat - l.amat) / l.amat AS amat
+,100 * (c.amd - l.amd) / l.amd AS amd
+,100 * (c.amgn - l.amgn) / l.amgn AS amgn
+,100 * (c.amp - l.amp) / l.amp AS amp
+,100 * (c.amt - l.amt) / l.amt AS amt
+,100 * (c.amzn - l.amzn) / l.amzn AS amzn
+,100 * (c.an - l.an) / l.an AS an
+,100 * (c.anf - l.anf) / l.anf AS anf
+,100 * (c.aon - l.aon) / l.aon AS aon
+,100 * (c.apa - l.apa) / l.apa AS apa
+,100 * (c.apc - l.apc) / l.apc AS apc
+,100 * (c.apd - l.apd) / l.apd AS apd
+,100 * (c.aph - l.aph) / l.aph AS aph
+,100 * (c.apol - l.apol) / l.apol AS apol
+,100 * (c.arg - l.arg) / l.arg AS arg
+,100 * (c.ati - l.ati) / l.ati AS ati
+,100 * (c.avb - l.avb) / l.avb AS avb
+,100 * (c.avp - l.avp) / l.avp AS avp
+,100 * (c.avy - l.avy) / l.avy AS avy
+,100 * (c.axp - l.axp) / l.axp AS axp
+,100 * (c.azo - l.azo) / l.azo AS azo
+,100 * (c.ba - l.ba) / l.ba AS ba
+,100 * (c.bac - l.bac) / l.bac AS bac
+,100 * (c.bax - l.bax) / l.bax AS bax
+,100 * (c.bbby - l.bbby) / l.bbby AS bbby
+,100 * (c.bbt - l.bbt) / l.bbt AS bbt
+,100 * (c.bby - l.bby) / l.bby AS bby
+,100 * (c.bcr - l.bcr) / l.bcr AS bcr
+,100 * (c.bdx - l.bdx) / l.bdx AS bdx
+,100 * (c.beam - l.beam) / l.beam AS beam
+,100 * (c.ben - l.ben) / l.ben AS ben
+,100 * (c.bf - l.bf) / l.bf AS bf
+,100 * (c.bhi - l.bhi) / l.bhi AS bhi
+,100 * (c.biib - l.biib) / l.biib AS biib
+,100 * (c.bk - l.bk) / l.bk AS bk
+,100 * (c.blk - l.blk) / l.blk AS blk
+,100 * (c.bll - l.bll) / l.bll AS bll
+,100 * (c.bmc - l.bmc) / l.bmc AS bmc
+,100 * (c.bms - l.bms) / l.bms AS bms
+,100 * (c.bmy - l.bmy) / l.bmy AS bmy
+,100 * (c.brcm - l.brcm) / l.brcm AS brcm
+,100 * (c.brkb - l.brkb) / l.brkb AS brkb
+,100 * (c.bsx - l.bsx) / l.bsx AS bsx
+,100 * (c.btu - l.btu) / l.btu AS btu
+,100 * (c.bwa - l.bwa) / l.bwa AS bwa
+,100 * (c.bxp - l.bxp) / l.bxp AS bxp
+,100 * (c.c - l.c) / l.c AS c
+,100 * (c.ca - l.ca) / l.ca AS ca
+,100 * (c.cag - l.cag) / l.cag AS cag
+,100 * (c.cah - l.cah) / l.cah AS cah
+,100 * (c.cam - l.cam) / l.cam AS cam
+,100 * (c.cat - l.cat) / l.cat AS cat
+,100 * (c.cb - l.cb) / l.cb AS cb
+,100 * (c.cbg - l.cbg) / l.cbg AS cbg
+,100 * (c.cbs - l.cbs) / l.cbs AS cbs
+,100 * (c.cce - l.cce) / l.cce AS cce
+,100 * (c.cci - l.cci) / l.cci AS cci
+,100 * (c.ccl - l.ccl) / l.ccl AS ccl
+,100 * (c.celg - l.celg) / l.celg AS celg
+,100 * (c.cern - l.cern) / l.cern AS cern
+,100 * (c.cf - l.cf) / l.cf AS cf
+,100 * (c.cfn - l.cfn) / l.cfn AS cfn
+,100 * (c.chk - l.chk) / l.chk AS chk
+,100 * (c.chrw - l.chrw) / l.chrw AS chrw
+,100 * (c.ci - l.ci) / l.ci AS ci
+,100 * (c.cinf - l.cinf) / l.cinf AS cinf
+,100 * (c.cl - l.cl) / l.cl AS cl
+,100 * (c.clf - l.clf) / l.clf AS clf
+,100 * (c.clx - l.clx) / l.clx AS clx
+,100 * (c.cma - l.cma) / l.cma AS cma
+,100 * (c.cmcsa - l.cmcsa) / l.cmcsa AS cmcsa
+,100 * (c.cme - l.cme) / l.cme AS cme
+,100 * (c.cmg - l.cmg) / l.cmg AS cmg
+,100 * (c.cmi - l.cmi) / l.cmi AS cmi
+,100 * (c.cms - l.cms) / l.cms AS cms
+,100 * (c.cnp - l.cnp) / l.cnp AS cnp
+,100 * (c.cnx - l.cnx) / l.cnx AS cnx
+,100 * (c.cof - l.cof) / l.cof AS cof
+,100 * (c.cog - l.cog) / l.cog AS cog
+,100 * (c.coh - l.coh) / l.coh AS coh
+,100 * (c.col - l.col) / l.col AS col
+,100 * (c.cop - l.cop) / l.cop AS cop
+,100 * (c.cost - l.cost) / l.cost AS cost
+,100 * (c.cov - l.cov) / l.cov AS cov
+,100 * (c.cpb - l.cpb) / l.cpb AS cpb
+,100 * (c.crm - l.crm) / l.crm AS crm
+,100 * (c.csc - l.csc) / l.csc AS csc
+,100 * (c.csco - l.csco) / l.csco AS csco
+,100 * (c.csx - l.csx) / l.csx AS csx
+,100 * (c.ctas - l.ctas) / l.ctas AS ctas
+,100 * (c.ctl - l.ctl) / l.ctl AS ctl
+,100 * (c.ctsh - l.ctsh) / l.ctsh AS ctsh
+,100 * (c.ctxs - l.ctxs) / l.ctxs AS ctxs
+,100 * (c.cvc - l.cvc) / l.cvc AS cvc
+,100 * (c.cvh - l.cvh) / l.cvh AS cvh
+,100 * (c.cvs - l.cvs) / l.cvs AS cvs
+,100 * (c.cvx - l.cvx) / l.cvx AS cvx
+,100 * (c.d - l.d) / l.d AS d
+,100 * (c.dd - l.dd) / l.dd AS dd
+,100 * (c.de - l.de) / l.de AS de
+,100 * (c.dell - l.dell) / l.dell AS dell
+,100 * (c.df - l.df) / l.df AS df
+,100 * (c.dfs - l.dfs) / l.dfs AS dfs
+,100 * (c.dg - l.dg) / l.dg AS dg
+,100 * (c.dgx - l.dgx) / l.dgx AS dgx
+,100 * (c.dhi - l.dhi) / l.dhi AS dhi
+,100 * (c.dhr - l.dhr) / l.dhr AS dhr
+,100 * (c.dis - l.dis) / l.dis AS dis
+,100 * (c.disca - l.disca) / l.disca AS disca
+,100 * (c.dlph - l.dlph) / l.dlph AS dlph
+,100 * (c.dltr - l.dltr) / l.dltr AS dltr
+,100 * (c.dnb - l.dnb) / l.dnb AS dnb
+,100 * (c.dnr - l.dnr) / l.dnr AS dnr
+,100 * (c.do - l.do) / l.do AS do
+,100 * (c.dov - l.dov) / l.dov AS dov
+,100 * (c.dow - l.dow) / l.dow AS dow
+,100 * (c.dps - l.dps) / l.dps AS dps
+,100 * (c.dri - l.dri) / l.dri AS dri
+,100 * (c.dte - l.dte) / l.dte AS dte
+,100 * (c.dtv - l.dtv) / l.dtv AS dtv
+,100 * (c.duk - l.duk) / l.duk AS duk
+,100 * (c.dva - l.dva) / l.dva AS dva
+,100 * (c.dvn - l.dvn) / l.dvn AS dvn
+,100 * (c.ea - l.ea) / l.ea AS ea
+,100 * (c.ebay - l.ebay) / l.ebay AS ebay
+,100 * (c.ecl - l.ecl) / l.ecl AS ecl
+,100 * (c.ed - l.ed) / l.ed AS ed
+,100 * (c.efx - l.efx) / l.efx AS efx
+,100 * (c.eix - l.eix) / l.eix AS eix
+,100 * (c.el - l.el) / l.el AS el
+,100 * (c.emc - l.emc) / l.emc AS emc
+,100 * (c.emn - l.emn) / l.emn AS emn
+,100 * (c.emr - l.emr) / l.emr AS emr
+,100 * (c.eog - l.eog) / l.eog AS eog
+,100 * (c.eqr - l.eqr) / l.eqr AS eqr
+,100 * (c.eqt - l.eqt) / l.eqt AS eqt
+,100 * (c.esrx - l.esrx) / l.esrx AS esrx
+,100 * (c.esv - l.esv) / l.esv AS esv
+,100 * (c.etfc - l.etfc) / l.etfc AS etfc
+,100 * (c.etn - l.etn) / l.etn AS etn
+,100 * (c.etr - l.etr) / l.etr AS etr
+,100 * (c.ew - l.ew) / l.ew AS ew
+,100 * (c.exc - l.exc) / l.exc AS exc
+,100 * (c.expd - l.expd) / l.expd AS expd
+,100 * (c.expe - l.expe) / l.expe AS expe
+,100 * (c.f - l.f) / l.f AS f
+,100 * (c.fast - l.fast) / l.fast AS fast
+,100 * (c.fcx - l.fcx) / l.fcx AS fcx
+,100 * (c.fdo - l.fdo) / l.fdo AS fdo
+,100 * (c.fdx - l.fdx) / l.fdx AS fdx
+,100 * (c.fe - l.fe) / l.fe AS fe
+,100 * (c.ffiv - l.ffiv) / l.ffiv AS ffiv
+,100 * (c.fhn - l.fhn) / l.fhn AS fhn
+,100 * (c.fis - l.fis) / l.fis AS fis
+,100 * (c.fisv - l.fisv) / l.fisv AS fisv
+,100 * (c.fitb - l.fitb) / l.fitb AS fitb
+,100 * (c.flir - l.flir) / l.flir AS flir
+,100 * (c.flr - l.flr) / l.flr AS flr
+,100 * (c.fls - l.fls) / l.fls AS fls
+,100 * (c.fmc - l.fmc) / l.fmc AS fmc
+,100 * (c.fosl - l.fosl) / l.fosl AS fosl
+,100 * (c.frx - l.frx) / l.frx AS frx
+,100 * (c.fslr - l.fslr) / l.fslr AS fslr
+,100 * (c.fti - l.fti) / l.fti AS fti
+,100 * (c.ftr - l.ftr) / l.ftr AS ftr
+,100 * (c.gas - l.gas) / l.gas AS gas
+,100 * (c.gci - l.gci) / l.gci AS gci
+,100 * (c.gd - l.gd) / l.gd AS gd
+,100 * (c.ge - l.ge) / l.ge AS ge
+,100 * (c.gild - l.gild) / l.gild AS gild
+,100 * (c.gis - l.gis) / l.gis AS gis
+,100 * (c.glw - l.glw) / l.glw AS glw
+,100 * (c.gme - l.gme) / l.gme AS gme
+,100 * (c.gnw - l.gnw) / l.gnw AS gnw
+,100 * (c.goog - l.goog) / l.goog AS goog
+,100 * (c.gpc - l.gpc) / l.gpc AS gpc
+,100 * (c.gps - l.gps) / l.gps AS gps
+,100 * (c.grmn - l.grmn) / l.grmn AS grmn
+,100 * (c.gs - l.gs) / l.gs AS gs
+,100 * (c.gt - l.gt) / l.gt AS gt
+,100 * (c.gww - l.gww) / l.gww AS gww
+,100 * (c.hal - l.hal) / l.hal AS hal
+,100 * (c.har - l.har) / l.har AS har
+,100 * (c.has - l.has) / l.has AS has
+,100 * (c.hban - l.hban) / l.hban AS hban
+,100 * (c.hcbk - l.hcbk) / l.hcbk AS hcbk
+,100 * (c.hcn - l.hcn) / l.hcn AS hcn
+,100 * (c.hcp - l.hcp) / l.hcp AS hcp
+,100 * (c.hd - l.hd) / l.hd AS hd
+,100 * (c.hes - l.hes) / l.hes AS hes
+,100 * (c.hig - l.hig) / l.hig AS hig
+,100 * (c.hnz - l.hnz) / l.hnz AS hnz
+,100 * (c.hog - l.hog) / l.hog AS hog
+,100 * (c.hon - l.hon) / l.hon AS hon
+,100 * (c.hot - l.hot) / l.hot AS hot
+,100 * (c.hp - l.hp) / l.hp AS hp
+,100 * (c.hpq - l.hpq) / l.hpq AS hpq
+,100 * (c.hrb - l.hrb) / l.hrb AS hrb
+,100 * (c.hrl - l.hrl) / l.hrl AS hrl
+,100 * (c.hrs - l.hrs) / l.hrs AS hrs
+,100 * (c.hsp - l.hsp) / l.hsp AS hsp
+,100 * (c.hst - l.hst) / l.hst AS hst
+,100 * (c.hsy - l.hsy) / l.hsy AS hsy
+,100 * (c.hum - l.hum) / l.hum AS hum
+,100 * (c.ibm - l.ibm) / l.ibm AS ibm
+,100 * (c.ice - l.ice) / l.ice AS ice
+,100 * (c.iff - l.iff) / l.iff AS iff
+,100 * (c.igt - l.igt) / l.igt AS igt
+,100 * (c.intc - l.intc) / l.intc AS intc
+,100 * (c.intu - l.intu) / l.intu AS intu
+,100 * (c.ip - l.ip) / l.ip AS ip
+,100 * (c.ipg - l.ipg) / l.ipg AS ipg
+,100 * (c.ir - l.ir) / l.ir AS ir
+,100 * (c.irm - l.irm) / l.irm AS irm
+,100 * (c.isrg - l.isrg) / l.isrg AS isrg
+,100 * (c.itw - l.itw) / l.itw AS itw
+,100 * (c.ivz - l.ivz) / l.ivz AS ivz
+,100 * (c.jbl - l.jbl) / l.jbl AS jbl
+,100 * (c.jci - l.jci) / l.jci AS jci
+,100 * (c.jcp - l.jcp) / l.jcp AS jcp
+,100 * (c.jdsu - l.jdsu) / l.jdsu AS jdsu
+,100 * (c.jec - l.jec) / l.jec AS jec
+,100 * (c.jnj - l.jnj) / l.jnj AS jnj
+,100 * (c.jnpr - l.jnpr) / l.jnpr AS jnpr
+,100 * (c.joy - l.joy) / l.joy AS joy
+,100 * (c.jpm - l.jpm) / l.jpm AS jpm
+,100 * (c.jwn - l.jwn) / l.jwn AS jwn
+,100 * (c.k - l.k) / l.k AS k
+,100 * (c.key - l.key) / l.key AS key
+,100 * (c.kim - l.kim) / l.kim AS kim
+,100 * (c.klac - l.klac) / l.klac AS klac
+,100 * (c.kmb - l.kmb) / l.kmb AS kmb
+,100 * (c.kmi - l.kmi) / l.kmi AS kmi
+,100 * (c.kmx - l.kmx) / l.kmx AS kmx
+,100 * (c.ko - l.ko) / l.ko AS ko
+,100 * (c.kr - l.kr) / l.kr AS kr
+,100 * (c.krft - l.krft) / l.krft AS krft
+,100 * (c.kss - l.kss) / l.kss AS kss
+,100 * (c.l - l.l) / l.l AS l
+,100 * (c.leg - l.leg) / l.leg AS leg
+,100 * (c.len - l.len) / l.len AS len
+,100 * (c.lh - l.lh) / l.lh AS lh
+,100 * (c.life - l.life) / l.life AS life
+,100 * (c.lll - l.lll) / l.lll AS lll
+,100 * (c.lltc - l.lltc) / l.lltc AS lltc
+,100 * (c.lly - l.lly) / l.lly AS lly
+,100 * (c.lm - l.lm) / l.lm AS lm
+,100 * (c.lmt - l.lmt) / l.lmt AS lmt
+,100 * (c.lnc - l.lnc) / l.lnc AS lnc
+,100 * (c.lo - l.lo) / l.lo AS lo
+,100 * (c.low - l.low) / l.low AS low
+,100 * (c.lrcx - l.lrcx) / l.lrcx AS lrcx
+,100 * (c.lsi - l.lsi) / l.lsi AS lsi
+,100 * (c.ltd - l.ltd) / l.ltd AS ltd
+,100 * (c.luk - l.luk) / l.luk AS luk
+,100 * (c.luv - l.luv) / l.luv AS luv
+,100 * (c.lyb - l.lyb) / l.lyb AS lyb
+,100 * (c.m - l.m) / l.m AS m
+,100 * (c.ma - l.ma) / l.ma AS ma
+,100 * (c.mar - l.mar) / l.mar AS mar
+,100 * (c.mas - l.mas) / l.mas AS mas
+,100 * (c.mat - l.mat) / l.mat AS mat
+,100 * (c.mcd - l.mcd) / l.mcd AS mcd
+,100 * (c.mchp - l.mchp) / l.mchp AS mchp
+,100 * (c.mck - l.mck) / l.mck AS mck
+,100 * (c.mco - l.mco) / l.mco AS mco
+,100 * (c.mdlz - l.mdlz) / l.mdlz AS mdlz
+,100 * (c.mdt - l.mdt) / l.mdt AS mdt
+,100 * (c.met - l.met) / l.met AS met
+,100 * (c.mhfi - l.mhfi) / l.mhfi AS mhfi
+,100 * (c.mjn - l.mjn) / l.mjn AS mjn
+,100 * (c.mkc - l.mkc) / l.mkc AS mkc
+,100 * (c.mmc - l.mmc) / l.mmc AS mmc
+,100 * (c.mmm - l.mmm) / l.mmm AS mmm
+,100 * (c.mnst - l.mnst) / l.mnst AS mnst
+,100 * (c.mo - l.mo) / l.mo AS mo
+,100 * (c.molx - l.molx) / l.molx AS molx
+,100 * (c.mon - l.mon) / l.mon AS mon
+,100 * (c.mos - l.mos) / l.mos AS mos
+,100 * (c.mpc - l.mpc) / l.mpc AS mpc
+,100 * (c.mrk - l.mrk) / l.mrk AS mrk
+,100 * (c.mro - l.mro) / l.mro AS mro
+,100 * (c.ms - l.ms) / l.ms AS ms
+,100 * (c.msft - l.msft) / l.msft AS msft
+,100 * (c.msi - l.msi) / l.msi AS msi
+,100 * (c.mtb - l.mtb) / l.mtb AS mtb
+,100 * (c.mu - l.mu) / l.mu AS mu
+,100 * (c.mur - l.mur) / l.mur AS mur
+,100 * (c.mwv - l.mwv) / l.mwv AS mwv
+,100 * (c.myl - l.myl) / l.myl AS myl
+,100 * (c.nbl - l.nbl) / l.nbl AS nbl
+,100 * (c.nbr - l.nbr) / l.nbr AS nbr
+,100 * (c.ndaq - l.ndaq) / l.ndaq AS ndaq
+,100 * (c.ne - l.ne) / l.ne AS ne
+,100 * (c.nee - l.nee) / l.nee AS nee
+,100 * (c.nem - l.nem) / l.nem AS nem
+,100 * (c.nflx - l.nflx) / l.nflx AS nflx
+,100 * (c.nfx - l.nfx) / l.nfx AS nfx
+,100 * (c.ni - l.ni) / l.ni AS ni
+,100 * (c.nke - l.nke) / l.nke AS nke
+,100 * (c.noc - l.noc) / l.noc AS noc
+,100 * (c.nov - l.nov) / l.nov AS nov
+,100 * (c.nrg - l.nrg) / l.nrg AS nrg
+,100 * (c.nsc - l.nsc) / l.nsc AS nsc
+,100 * (c.ntap - l.ntap) / l.ntap AS ntap
+,100 * (c.ntrs - l.ntrs) / l.ntrs AS ntrs
+,100 * (c.nu - l.nu) / l.nu AS nu
+,100 * (c.nue - l.nue) / l.nue AS nue
+,100 * (c.nvda - l.nvda) / l.nvda AS nvda
+,100 * (c.nwl - l.nwl) / l.nwl AS nwl
+,100 * (c.nwsa - l.nwsa) / l.nwsa AS nwsa
+,100 * (c.nyx - l.nyx) / l.nyx AS nyx
+,100 * (c.oi - l.oi) / l.oi AS oi
+,100 * (c.oke - l.oke) / l.oke AS oke
+,100 * (c.omc - l.omc) / l.omc AS omc
+,100 * (c.orcl - l.orcl) / l.orcl AS orcl
+,100 * (c.orly - l.orly) / l.orly AS orly
+,100 * (c.oxy - l.oxy) / l.oxy AS oxy
+,100 * (c.payx - l.payx) / l.payx AS payx
+,100 * (c.pbct - l.pbct) / l.pbct AS pbct
+,100 * (c.pbi - l.pbi) / l.pbi AS pbi
+,100 * (c.pcar - l.pcar) / l.pcar AS pcar
+,100 * (c.pcg - l.pcg) / l.pcg AS pcg
+,100 * (c.pcl - l.pcl) / l.pcl AS pcl
+,100 * (c.pcln - l.pcln) / l.pcln AS pcln
+,100 * (c.pcp - l.pcp) / l.pcp AS pcp
+,100 * (c.pcs - l.pcs) / l.pcs AS pcs
+,100 * (c.pdco - l.pdco) / l.pdco AS pdco
+,100 * (c.peg - l.peg) / l.peg AS peg
+,100 * (c.pep - l.pep) / l.pep AS pep
+,100 * (c.petm - l.petm) / l.petm AS petm
+,100 * (c.pfe - l.pfe) / l.pfe AS pfe
+,100 * (c.pfg - l.pfg) / l.pfg AS pfg
+,100 * (c.pg - l.pg) / l.pg AS pg
+,100 * (c.pgr - l.pgr) / l.pgr AS pgr
+,100 * (c.ph - l.ph) / l.ph AS ph
+,100 * (c.phm - l.phm) / l.phm AS phm
+,100 * (c.pki - l.pki) / l.pki AS pki
+,100 * (c.pld - l.pld) / l.pld AS pld
+,100 * (c.pll - l.pll) / l.pll AS pll
+,100 * (c.pm - l.pm) / l.pm AS pm
+,100 * (c.pnc - l.pnc) / l.pnc AS pnc
+,100 * (c.pnr - l.pnr) / l.pnr AS pnr
+,100 * (c.pnw - l.pnw) / l.pnw AS pnw
+,100 * (c.pom - l.pom) / l.pom AS pom
+,100 * (c.ppg - l.ppg) / l.ppg AS ppg
+,100 * (c.ppl - l.ppl) / l.ppl AS ppl
+,100 * (c.prgo - l.prgo) / l.prgo AS prgo
+,100 * (c.pru - l.pru) / l.pru AS pru
+,100 * (c.psa - l.psa) / l.psa AS psa
+,100 * (c.psx - l.psx) / l.psx AS psx
+,100 * (c.pvh - l.pvh) / l.pvh AS pvh
+,100 * (c.pwr - l.pwr) / l.pwr AS pwr
+,100 * (c.px - l.px) / l.px AS px
+,100 * (c.pxd - l.pxd) / l.pxd AS pxd
+,100 * (c.qcom - l.qcom) / l.qcom AS qcom
+,100 * (c.qep - l.qep) / l.qep AS qep
+,100 * (c.r - l.r) / l.r AS r
+,100 * (c.rai - l.rai) / l.rai AS rai
+,100 * (c.rdc - l.rdc) / l.rdc AS rdc
+,100 * (c.rf - l.rf) / l.rf AS rf
+,100 * (c.rhi - l.rhi) / l.rhi AS rhi
+,100 * (c.rht - l.rht) / l.rht AS rht
+,100 * (c.rl - l.rl) / l.rl AS rl
+,100 * (c.rok - l.rok) / l.rok AS rok
+,100 * (c.rop - l.rop) / l.rop AS rop
+,100 * (c.rost - l.rost) / l.rost AS rost
+,100 * (c.rrc - l.rrc) / l.rrc AS rrc
+,100 * (c.rsg - l.rsg) / l.rsg AS rsg
+,100 * (c.rtn - l.rtn) / l.rtn AS rtn
+,100 * (c.s - l.s) / l.s AS s
+,100 * (c.sai - l.sai) / l.sai AS sai
+,100 * (c.sbux - l.sbux) / l.sbux AS sbux
+,100 * (c.scg - l.scg) / l.scg AS scg
+,100 * (c.schw - l.schw) / l.schw AS schw
+,100 * (c.se - l.se) / l.se AS se
+,100 * (c.see - l.see) / l.see AS see
+,100 * (c.shw - l.shw) / l.shw AS shw
+,100 * (c.sial - l.sial) / l.sial AS sial
+,100 * (c.sjm - l.sjm) / l.sjm AS sjm
+,100 * (c.slb - l.slb) / l.slb AS slb
+,100 * (c.slm - l.slm) / l.slm AS slm
+,100 * (c.sna - l.sna) / l.sna AS sna
+,100 * (c.sndk - l.sndk) / l.sndk AS sndk
+,100 * (c.sni - l.sni) / l.sni AS sni
+,100 * (c.so - l.so) / l.so AS so
+,100 * (c.spg - l.spg) / l.spg AS spg
+,100 * (c.spls - l.spls) / l.spls AS spls
+,100 * (c.srcl - l.srcl) / l.srcl AS srcl
+,100 * (c.sre - l.sre) / l.sre AS sre
+,100 * (c.sti - l.sti) / l.sti AS sti
+,100 * (c.stj - l.stj) / l.stj AS stj
+,100 * (c.stt - l.stt) / l.stt AS stt
+,100 * (c.stx - l.stx) / l.stx AS stx
+,100 * (c.stz - l.stz) / l.stz AS stz
+,100 * (c.swk - l.swk) / l.swk AS swk
+,100 * (c.swn - l.swn) / l.swn AS swn
+,100 * (c.swy - l.swy) / l.swy AS swy
+,100 * (c.syk - l.syk) / l.syk AS syk
+,100 * (c.symc - l.symc) / l.symc AS symc
+,100 * (c.syy - l.syy) / l.syy AS syy
+,100 * (c.t - l.t) / l.t AS t
+,100 * (c.tap - l.tap) / l.tap AS tap
+,100 * (c.tdc - l.tdc) / l.tdc AS tdc
+,100 * (c.te - l.te) / l.te AS te
+,100 * (c.teg - l.teg) / l.teg AS teg
+,100 * (c.tel - l.tel) / l.tel AS tel
+,100 * (c.ter - l.ter) / l.ter AS ter
+,100 * (c.tgt - l.tgt) / l.tgt AS tgt
+,100 * (c.thc - l.thc) / l.thc AS thc
+,100 * (c.tif - l.tif) / l.tif AS tif
+,100 * (c.tjx - l.tjx) / l.tjx AS tjx
+,100 * (c.tmk - l.tmk) / l.tmk AS tmk
+,100 * (c.tmo - l.tmo) / l.tmo AS tmo
+,100 * (c.trip - l.trip) / l.trip AS trip
+,100 * (c.trow - l.trow) / l.trow AS trow
+,100 * (c.trv - l.trv) / l.trv AS trv
+,100 * (c.tsn - l.tsn) / l.tsn AS tsn
+,100 * (c.tso - l.tso) / l.tso AS tso
+,100 * (c.tss - l.tss) / l.tss AS tss
+,100 * (c.twc - l.twc) / l.twc AS twc
+,100 * (c.twx - l.twx) / l.twx AS twx
+,100 * (c.txn - l.txn) / l.txn AS txn
+,100 * (c.txt - l.txt) / l.txt AS txt
+,100 * (c.tyc - l.tyc) / l.tyc AS tyc
+,100 * (c.unh - l.unh) / l.unh AS unh
+,100 * (c.unm - l.unm) / l.unm AS unm
+,100 * (c.unp - l.unp) / l.unp AS unp
+,100 * (c.ups - l.ups) / l.ups AS ups
+,100 * (c.urbn - l.urbn) / l.urbn AS urbn
+,100 * (c.usb - l.usb) / l.usb AS usb
+,100 * (c.utx - l.utx) / l.utx AS utx
+,100 * (c.v - l.v) / l.v AS v
+,100 * (c.var - l.var) / l.var AS var
+,100 * (c.vfc - l.vfc) / l.vfc AS vfc
+,100 * (c.viab - l.viab) / l.viab AS viab
+,100 * (c.vlo - l.vlo) / l.vlo AS vlo
+,100 * (c.vmc - l.vmc) / l.vmc AS vmc
+,100 * (c.vno - l.vno) / l.vno AS vno
+,100 * (c.vrsn - l.vrsn) / l.vrsn AS vrsn
+,100 * (c.vtr - l.vtr) / l.vtr AS vtr
+,100 * (c.vz - l.vz) / l.vz AS vz
+,100 * (c.wag - l.wag) / l.wag AS wag
+,100 * (c.wat - l.wat) / l.wat AS wat
+,100 * (c.wdc - l.wdc) / l.wdc AS wdc
+,100 * (c.wec - l.wec) / l.wec AS wec
+,100 * (c.wfc - l.wfc) / l.wfc AS wfc
+,100 * (c.wfm - l.wfm) / l.wfm AS wfm
+,100 * (c.whr - l.whr) / l.whr AS whr
+,100 * (c.win - l.win) / l.win AS win
+,100 * (c.wlp - l.wlp) / l.wlp AS wlp
+,100 * (c.wm - l.wm) / l.wm AS wm
+,100 * (c.wmb - l.wmb) / l.wmb AS wmb
+,100 * (c.wmt - l.wmt) / l.wmt AS wmt
+,100 * (c.wpo - l.wpo) / l.wpo AS wpo
+,100 * (c.wpx - l.wpx) / l.wpx AS wpx
+,100 * (c.wu - l.wu) / l.wu AS wu
+,100 * (c.wy - l.wy) / l.wy AS wy
+,100 * (c.wyn - l.wyn) / l.wyn AS wyn
+,100 * (c.wynn - l.wynn) / l.wynn AS wynn
+,100 * (c.x - l.x) / l.x AS x
+,100 * (c.xel - l.xel) / l.xel AS xel
+,100 * (c.xl - l.xl) / l.xl AS xl
+,100 * (c.xlnx - l.xlnx) / l.xlnx AS xlnx
+,100 * (c.xom - l.xom) / l.xom AS xom
+,100 * (c.xray - l.xray) / l.xray AS xray
+,100 * (c.xrx - l.xrx) / l.xrx AS xrx
+,100 * (c.xyl - l.xyl) / l.xyl AS xyl
+,100 * (c.yhoo - l.yhoo) / l.yhoo AS yhoo
+,100 * (c.yum - l.yum) / l.yum AS yum
+,100 * (c.zion - l.zion) / l.zion AS zion
+,100 * (c.zmh - l.zmh) / l.zmh AS zmh
+
+		FROM close AS c
+		JOIN lag_close AS l
+			ON c.dt = l.dt
+		ORDER BY dt
+		);
+		
