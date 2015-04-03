@@ -85,6 +85,7 @@ def db_select_one(query, args=None, columns=None):
     
   
 def db_query(query, args=None, commit=False):
+
   """Perform a query returning the database cursor if success else None.
 
   Use db_select for SELECT queries.
@@ -125,7 +126,7 @@ def linechart():
 	query = """
 		SELECT EXTRACT ( EPOCH FROM dt), {} FROM close
 		WHERE dt between '2001-01-01' AND '2001-12-31';
-		"""
+		
 	
 	for s in stocks:
 		data = db_select(query.format(s), columns=('x','y'))
