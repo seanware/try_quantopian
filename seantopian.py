@@ -114,6 +114,53 @@ def logout():
     flash('You were logged out')
     return redirect(url_for('show_entries'))
 
+@app.route('/remove')
+@app.route('/remove/<post_title>')
+def remove_entry(post_title=None):
+	"""Delete a blog post (must be logged in)"""
+	if not session.get('logged_in'):
+		return redirect(url_for('login'))
+	if post_title is None:
+		return redirect(url_for('show_entries'))
+	else:
+		post_title = post_title.decode("UTF-8")
+		result = mongo.db.entries.remove({'title': post_title})
+		print result
+		if result:
+			flash('New entry was sucessfuly deleted')
+	return redirect(url_for('show_entries'))
+
+@app.route('/edit')
+@app.route('/edit/<post_title>', methods=['GET', 'POST'])
+def edit_entry(post_title=None):
+	"""Update a blog post (must be logged in)"""
+	if not session.get('logged_in'):
+		return redirect(url_for('login'))
+	if post_title is None:
+		return redirect(url_for('show_entries'))
+	elif request.method == 'GET':
+		post_title = post_title.decode('UTF-8')
+		entry = mongo.db.entries.find_one({"title" : post_title})
+		if entry:
+			return render_template('edit_entries.html', entry=entry)
+		else:
+			flash("Could not find {}".format(post_title))
+			return redirect(url_for('show_entries'))
+	else:
+		post_title = post_title.decode('UTF-8')
+	 	post = {"author" : app.config['AUTHOR'],
+					"title" :request.form['title'],
+					'text': request.form['text'], 
+					'date' : datetime.datetime.utcnow()}
+		result = mongo.db.entries.find_and_modify({"title" : post_title}, post)
+		print "IN THE EDIT. RESULT ::::", result
+		if result:
+			flash("New entry was successfully update")
+	return redirect(url_for('show_entries'))
+
+
+
+
 
 if __name__ == "__main__":
     app.run(debug=True)

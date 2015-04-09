@@ -16,7 +16,7 @@
   <section {% if not loop.first %} class="truncated_post" {% endif %} >
 
 	  <button onclick=confirm_redirect("{{url_for('remove_entry') }}/{{entry.title|urlencode }}")>Remove</button>
-	  <button onclick=goto("{{url_for('edit_entry') }}/{{entry.title|urlencode }}")>Edit Entry</button>
+	  <a href="{{url_for('remove_entry') }}/{{entry.title|urlencode }}">Edit Entry</a>
 
     <li><h2>{{ entry.title }}</h2>{{ entry.text|safe }}
   {% else %}
