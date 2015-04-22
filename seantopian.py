@@ -12,6 +12,7 @@ from flask import Flask, g, render_template, request \
 from flask.ext.pymongo import PyMongo
 
 import database
+#from time import strftime
 
 app = Flask(__name__)
 
@@ -95,6 +96,7 @@ def linechart():
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     """Log in -- username and password taken from the MongoLabs URI."""
+    print request #debug only
     error = None
     if request.method == 'POST':
         if request.form['username'] != app.config['USERNAME']:
@@ -157,6 +159,11 @@ def edit_entry(post_title=None):
 		if result:
 			flash("New entry was successfully update")
 	return redirect(url_for('show_entries'))
+
+## Decorator to create a custom filter to fix the dates
+@app.template_filter("dateformat")
+def datetimeformat(value, format='%m-%d-%Y'):
+	return value.strftime(format)
 
 
 
