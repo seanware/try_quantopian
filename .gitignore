@@ -11,3 +11,6 @@ data/
 
 # Ignore generated files
 *generated__*
+
+#Ignore Ipython notebook files
+*.pynb

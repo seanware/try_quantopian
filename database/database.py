@@ -78,7 +78,9 @@ class Database:
             raise
         if results is None or len(results) == 0:
             return None
-        elif len(results[0]) > len(columns):
+	if columns is None:
+		columns = []
+        if  len(results[0]) > len(columns):
             columns = list(columns) + [
                     "col%d" % i for i in range(len(columns),len(results))]
         elif len(results[0]) < len(columns):

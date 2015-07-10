@@ -36,7 +36,16 @@
                 <label class="stack" for="stack">stack</label>
         </form>
 </div>
-
+<div>
+  <form action="{{ url_for('linechart') }}" method=post>
+  <select multiple id="stocks" name="stocks">  
+  {% for s in available_stocks %}
+  <option value="{{ s }}">{{ s }}</option>  
+  {% endfor %}
+  </select>
+  <input type=submit value=Go>
+  </form>
+</div>
 <script>
 var palette = new Rickshaw.Color.Palette();
 

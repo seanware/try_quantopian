@@ -22,9 +22,15 @@
         float: left;
         width: 40px;
 }
+
+#stockpick {
+  width: 42px;
+  margin: 2px;
+}
 </style>
 {% endblock %}
 {% block content %}
+<div class="row">
 <div id="chart_container">
         <div id="y_axis"></div>
         <div id="chart"></div>
@@ -36,7 +42,28 @@
                 <label class="stack" for="stack">stack</label>
         </form>
 </div>
+<div>
+  Available stocks:
+  <form action="{{ url_for('linechart') }}" method=post>
+	  <div style="display:flex;">
+		  {% for g in groups %}
+		  <div class="stockpick"> {{ g }} <br/>
+			  
+			  <select multiple id="stocks_{{ g }}" name="stocks_{{ g }}">
+				  {% for v in grouped_stocks[g] %}
+				  <option value="{{ v }}">{{ v }}</option>
+				  {% endfor %}
+			  </select>
 
+  </div>
+  {% endfor %}
+
+  </div>
+  <input type=submit value=Go>
+  </form>
+</div>
+</div>
+</div>
 <script>
 var palette = new Rickshaw.Color.Palette();
 
