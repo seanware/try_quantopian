@@ -1,0 +1,4 @@
+=== seantopian Config Vars
+DATABASE_URL:               postgres://bahdumvjysuhlo:WV4G-MrIUQB83JfcrwNI2INt-_@ec2-50-17-181-147.compute-1.amazonaws.com:5432/d2ocqoavbng3cp
+HEROKU_POSTGRESQL_ROSE_URL: postgres://bahdumvjysuhlo:WV4G-MrIUQB83JfcrwNI2INt-_@ec2-50-17-181-147.compute-1.amazonaws.com:5432/d2ocqoavbng3cp
+MONGO_URI:                  mongodb://seanblog:sblogpass@ds051831.mongolab.com:51831/blog_sean
