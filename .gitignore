@@ -1,3 +1,8 @@
+
+# Ignore temporary Vim files
+*.swp
+*~
+
 # Ignore compiled Python code
 *.pyc
 
@@ -11,6 +16,3 @@ data/
 # Ignore Ipython notebook files
 *.ipynb
 
-# Ignore temporary Vim files
-*.swp
-*~
