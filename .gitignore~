@@ -16,6 +16,6 @@ data/
 *.pynb
 
 #Ignore temporary Vim files
-*.py~
+*~
 *.swp
 *.swo
