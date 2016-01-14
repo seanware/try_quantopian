@@ -16,6 +16,9 @@ data/
 *.pynb
 
 #Ignore temporary Vim files
-*.py~
-*.swp
-*.swo
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]
+*.un~
+Session.vim
+.netrwhist
+*~
