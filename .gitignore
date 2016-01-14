@@ -17,3 +17,5 @@ data/
 
 #Ignore temporary Vim files
 *~
+*.swp
+*.swo
