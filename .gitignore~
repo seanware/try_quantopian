@@ -1,6 +1,7 @@
-# Ignore irrelevant files from the Sublime Text editor
-*.sublime-workspace
-*.sublime-project
+
+# Ignore temporary Vim files
+*.swp
+*~
 
 # Ignore compiled Python code
 *.pyc
@@ -12,10 +13,6 @@ data/
 # Ignore generated files
 *generated__*
 
-#Ignore Ipython notebook files
-*.pynb
+# Ignore Ipython notebook files
+*.ipynb
 
-#Ignore temporary Vim files
-*.swp
-*.py~
-*~

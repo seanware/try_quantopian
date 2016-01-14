@@ -1,6 +1,5 @@
-
 # Ignore temporary Vim files
-*.swp
+*.sw?
 *~
 
 # Ignore compiled Python code
